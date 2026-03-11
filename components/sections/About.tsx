@@ -9,10 +9,10 @@ export function AboutSection() {
   const { ref, isInView } = useInViewAnimation(true);
 
   const stats = [
-    { label: 'Years Experience', value: 20, icon: Award },
-    { label: 'Active Projects', value: 150, icon: TrendingUp },
-    { label: 'Team Members', value: 250, icon: Users },
-    { label: 'Client Satisfaction', value: 98, suffix: '%', icon: Wrench },
+    { label: 'Years Experience', value: 5, icon: Award },
+    { label: 'Active Projects', value: 50, icon: TrendingUp },
+    { label: 'Team Members', value: 150, icon: Users },
+    { label: 'Client Satisfaction', value: 100, suffix: '%', icon: Wrench },
   ];
 
   return (
@@ -41,19 +41,24 @@ export function AboutSection() {
             />
 
             {/* Main image container */}
-            <div
-              className="relative bg-gradient-to-br from-[#8c0415]/20 to-[#000000] p-8 border border-[#bf0614]/50 overflow-hidden group"
-              style={{
-                clipPath: 'polygon(0 0, calc(100% - 30px) 0, 100% 30px, 100% 100%, 30px 100%, 0 calc(100% - 30px))',
-              }}
-            >
-              {/* Placeholder for industrial image - user will add their own */}
-              <div className="aspect-square bg-gradient-to-br from-[#8c0415]/40 to-[#5c0010]/40 flex items-center justify-center group-hover:shadow-[0_0_40px_rgba(191,6,20,0.4)] transition-all duration-300">
-                <div className="text-center">
-                  <Wrench className="w-20 h-20 text-[#bf0614] mx-auto mb-4 opacity-50" />
-                  <p className="text-[#e6eaed]/50 text-sm">Industrial Excellence</p>
-                </div>
-              </div>
+<div
+  className="relative bg-gradient-to-br from-[#8c0415]/20 to-[#000000] p-8 border border-[#bf0614]/50 overflow-hidden group"
+  style={{
+    clipPath:
+      "polygon(0 0, calc(100% - 30px) 0, 100% 30px, 100% 100%, 30px 100%, 0 calc(100% - 30px))",
+  }}
+>
+ <div className="aspect-square overflow-hidden group-hover:shadow-[0_0_40px_rgba(191,6,20,0.4)] transition-all duration-300">
+  <video
+    className="w-full h-full object-cover"
+    autoPlay
+    loop
+    muted
+    playsInline
+  >
+    <source src="/about.mp4" type="video/mp4" />
+  </video>
+</div>
 
               {/* Animated gear decoration */}
               <motion.div
