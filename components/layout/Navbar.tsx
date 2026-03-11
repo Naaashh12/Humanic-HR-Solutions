@@ -60,12 +60,12 @@ export function Navbar() {
         {/* Logo — square SVG icon */}
         <Link href="/" className="flex items-center gap-2.5 group">
           <LogoIcon />
-          <span className="text-2xl lg:text-3xl font-bold font-bebas tracking-widest uppercase hidden sm:flex gap-1 items-center">
-            <span className="text-white">Golden</span>
-            <span className="text-[#bf0614] group-hover:text-[#ff1a2e] transition-colors">
-              Pyramids
-            </span>
-          </span>
+          <span className="flex items-center gap-1 font-bebas font-bold uppercase tracking-wider text-2xl sm:text-3xl lg:text-3xl">
+  <span className="text-white leading-none">Golden</span>
+  <span className="text-[#bf0614] leading-none group-hover:text-[#ff1a2e] transition-colors">
+    Pyramids
+  </span>
+</span>
         </Link>
 
         {/* Desktop Navigation */}
