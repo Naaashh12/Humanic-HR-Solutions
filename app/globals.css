@@ -277,3 +277,30 @@ body::before {
     text-shadow:0 0 10px rgba(191,6,20,0.6);
   }
 }
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+html, body {
+  overflow-x: hidden;
+}
+@keyframes marquee-reverse {
+  0% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.animate-marquee {
+  animation: marquee 25s linear infinite;
+}
+
+.animate-marquee-reverse {
+  animation: marquee-reverse 25s linear infinite;
+}

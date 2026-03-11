@@ -91,19 +91,18 @@ export function ClientsShowcase() {
 
   // Sample client data - can be replaced with real client logos
   const clients = [
-    { name: 'Aramco', category: 'Oil & Gas' },
-    { name: 'SABIC', category: 'Chemicals' },
-    { name: 'Yanbu Port', category: 'Ports & Logistics' },
-    { name: 'Saudi Electricity', category: 'Energy' },
-    { name: 'Gulf Industries', category: 'Manufacturing' },
-    { name: 'Desert Construction', category: 'Construction' },
-    { name: 'Marine Services', category: 'Maritime' },
-    { name: 'Industrial Supply Co', category: 'Supply' },
-  ];
-
+  { name: 'Aramco', logo: '/clients/saudi-aramco-seeklogo.png' },
+  { name: 'SABIC', logo: '/clients/sab.png' },
+  { name: 'Technip', logo: '/clients/Technip.svg' },
+  { name: 'Marafiq', logo: '/clients/marafi.png' },
+  { name: 'Hyundai', logo: '/clients/hyundai.svg' },
+  { name: 'Samsung', logo: '/clients/Samsung.png' },
+  { name: 'Saipem', logo: '/clients/dg0dcknquuegh69leek6eu9nvr.png' },
+  { name: 'Hitachi', logo: '/clients/Hitachi.png' },
+];
   const achievements = [
-    { icon: 'star', label: '98% Satisfaction', value: 'Client Rating' },
-    { icon: 'award', label: '150+', value: 'Active Projects' },
+    { icon: 'star', label: '100% Satisfaction', value: 'Client Rating' },
+    { icon: 'award', label: '50+', value: 'Active Projects' },
     { icon: 'check', label: '500+', value: 'Equipment Assets' },
     { icon: 'zap', label: '24/7', value: 'Support Available' },
   ];
@@ -123,7 +122,7 @@ export function ClientsShowcase() {
       {/* Particle Field Canvas */}
       <canvas
         ref={canvasRef}
-        className="absolute inset-0 w-full h-full opacity-40 pointer-events-none"
+        className="absolute inset-0 w-full h-full opacity-600 pointer-events-none"
       />
 
       <div className="container-custom relative z-10">
@@ -179,7 +178,7 @@ export function ClientsShowcase() {
           animate={isInView ? { opacity: 1 } : {}}
           transition={{ duration: 0.8, delay: 0.2 }}
         >
-          <h3 className="text-sm font-bold text-[#8c0415] uppercase tracking-widest text-center mb-8">
+          <h3 className="text-sm font-bold text-white uppercase tracking-widest text-center mb-8">
             Working With
           </h3>
 
@@ -188,12 +187,15 @@ export function ClientsShowcase() {
             <div className="flex animate-marquee gap-8">
               {[...clients, ...clients].map((client, idx) => (
                 <div
-                  key={idx}
-                  className="flex-shrink-0 px-6 py-4 border border-[#8c0415]/30 bg-black/50 hover:border-[#bf0614] transition-all duration-300 hover:shadow-[0_0_20px_rgba(191,6,20,0.3)] whitespace-nowrap"
-                >
-                  <div className="font-bold text-[#e6eaed] text-sm">{client.name}</div>
-                  <div className="text-xs text-[#8c0415]">{client.category}</div>
-                </div>
+  key={idx}
+  className="flex items-center justify-center w-[180px] h-[90px] border border-[#8c0415]/30 bg-black/60 hover:border-[#bf0614] transition-all duration-300 hover:shadow-[0_0_20px_rgba(191,6,20,0.3)]"
+>
+  <img
+    src={client.logo}
+    alt={client.name}
+    className="max-h-12 object-contain opacity-80 hover:opacity-100 transition"
+  />
+</div>
               ))}
             </div>
           </div>
@@ -203,12 +205,15 @@ export function ClientsShowcase() {
             <div className="flex animate-marquee-reverse gap-8">
               {[...clients, ...clients].reverse().map((client, idx) => (
                 <div
-                  key={idx}
-                  className="flex-shrink-0 px-6 py-4 border border-[#8c0415]/30 bg-black/50 hover:border-[#bf0614] transition-all duration-300 hover:shadow-[0_0_20px_rgba(191,6,20,0.3)] whitespace-nowrap"
-                >
-                  <div className="font-bold text-[#e6eaed] text-sm">{client.name}</div>
-                  <div className="text-xs text-[#8c0415]">{client.category}</div>
-                </div>
+  key={idx}
+  className="flex items-center justify-center w-[180px] h-[90px] border border-[#8c0415]/30 bg-black/60 hover:border-[#bf0614] transition-all duration-300 hover:shadow-[0_0_20px_rgba(191,6,20,0.3)]"
+>
+  <img
+    src={client.logo}
+    alt={client.name}
+    className="max-h-12 object-contain opacity-80 hover:opacity-100 transition"
+  />
+</div>
               ))}
             </div>
           </div>
