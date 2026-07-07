@@ -26,6 +26,7 @@ interface HexImageClusterProps {
   alt?: string;
   cellSize?: number;
   className?: string;
+  zoom?: number;
 }
 
 /** Axial → pixel for pointy-top hexagons */
@@ -59,6 +60,7 @@ export function HexImageCluster({
   alt = 'Service image',
   cellSize = 180,
   className = '',
+  zoom = 1,
 }: HexImageClusterProps) {
   const uid = useId().replace(/:/g, '');
   const R   = cellSize / 2;
@@ -156,13 +158,13 @@ const cellPts = hexPoints(p.cx, p.cy, scaledR, 4);
               {/* Clipped image — full canvas size so every cell shows
                   a DIFFERENT region of the same image seamlessly */}
               <g clipPath={`url(#${clipId})`}>
-                <image
+               <image
   href={src}
-  x={-W * 0.025}
-  y={-H * 0.025}
-  width={W * 1.1}
-  height={H * 1.1}
-  preserveAspectRatio="xMidYMid meet"
+  x={-W * 0.075}
+  y={-H * 0.075}
+  width={W * 1.3}
+  height={H * 1.3}
+  preserveAspectRatio="xMidYMid slice"
 />
 
 

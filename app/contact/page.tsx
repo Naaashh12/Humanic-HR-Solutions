@@ -2,8 +2,14 @@
 
 import { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Phone, Mail, MapPin, Send } from 'lucide-react';
-import { COMPANY_PHONE, COMPANY_EMAIL, COMPANY_LOCATION } from '@/lib/constants';
+import { Phone, Mail, MapPin, Send, Clock3 } from 'lucide-react';
+import {
+  COMPANY_PHONE,
+  COMPANY_PHONE_ALT,
+  COMPANY_EMAIL,
+  COMPANY_LOCATION,
+  COMPANY_WEBSITE,
+} from '@/lib/constants';
 import { GlowButton } from '@/components/ui/GlowButton';
 
 export default function ContactPage() {
@@ -12,7 +18,7 @@ export default function ContactPage() {
     company: '',
     email: '',
     phone: '',
-    service: '',
+    hiringRequirement: '',
     message: '',
   });
   const [submitted, setSubmitted] = useState(false);
@@ -37,7 +43,7 @@ export default function ContactPage() {
 
     // Reset form after 3 seconds
     setTimeout(() => {
-      setFormData({ name: '', company: '', email: '', phone: '', service: '', message: '' });
+      setFormData({ name: '', company: '', email: '', phone: '', hiringRequirement: '', message: '' });
       setSubmitted(false);
     }, 3000);
   };
@@ -50,7 +56,7 @@ export default function ContactPage() {
           Get in Touch
         </h1>
         <p className="text-xl text-[#1b365d]/70">
-          Let's discuss how Humanic HR Solutions can support your people operations
+          Partner with Humanic HR Solutions for recruitment that delivers results.
         </p>
       </div>
 
@@ -65,7 +71,7 @@ export default function ContactPage() {
             viewport={{ once: true }}
           >
             <h2 className="text-3xl font-bold font-bebas text-[#1b365d] mb-8">
-              Contact Information
+              Humanic HR Solutions
             </h2>
 
             {/* Contact Methods */}
@@ -81,6 +87,12 @@ export default function ContactPage() {
                     className="text-[#cca300] hover:text-[#ffd700] font-semibold"
                   >
                     {COMPANY_PHONE}
+                  </a>
+                  <a
+                    href={`tel:${COMPANY_PHONE_ALT}`}
+                    className="text-[#cca300] hover:text-[#ffd700] font-semibold block mt-1"
+                  >
+                    {COMPANY_PHONE_ALT}
                   </a>
                   <p className="text-sm text-[#1b365d]/70">Available 24/7</p>
                 </div>
@@ -109,7 +121,34 @@ export default function ContactPage() {
                 <div>
                   <h3 className="font-bold text-[#1b365d] mb-2">Location</h3>
                   <p className="text-[#cca300] font-semibold">{COMPANY_LOCATION}</p>
-                  <p className="text-sm text-[#1b365d]/70">Postal Code: 46424</p>
+                  <p className="text-sm text-[#1b365d]/70">Mangalore, Karnataka, India</p>
+                </div>
+              </div>
+
+              <div className="flex items-start gap-4">
+                <div className="p-3 bg-[#997a00]/20 border border-[#cca300]">
+                  <Clock3 className="w-6 h-6 text-[#ffd700]" />
+                </div>
+                <div>
+                  <h3 className="font-bold text-[#1b365d] mb-2">Business Hours</h3>
+                  <p className="text-[#cca300] font-semibold">Monday – Saturday</p>
+                  <p className="text-sm text-[#1b365d]/70">9:00 AM – 6:00 PM</p>
+                  <p className="text-sm text-[#1b365d]/70">Sunday – Closed</p>
+                </div>
+              </div>
+
+              <div className="flex items-start gap-4">
+                <div className="p-3 bg-[#997a00]/20 border border-[#cca300]">
+                  <Send className="w-6 h-6 text-[#ffd700]" />
+                </div>
+                <div>
+                  <h3 className="font-bold text-[#1b365d] mb-2">Website</h3>
+                  <a
+                    href={`https://${COMPANY_WEBSITE}`}
+                    className="text-[#cca300] hover:text-[#ffd700] font-semibold"
+                  >
+                    {COMPANY_WEBSITE}
+                  </a>
                 </div>
               </div>
             </div>
@@ -126,7 +165,7 @@ export default function ContactPage() {
                 </li>
                 <li className="flex items-center gap-2">
                   <span className="w-2 h-2 bg-[#cca300]" />
-                  Urgent HR support available 24/7
+                  Urgent hiring support available 24/7
                 </li>
                 <li className="flex items-center gap-2">
                   <span className="w-2 h-2 bg-[#cca300]" />
@@ -216,30 +255,19 @@ export default function ContactPage() {
                     />
                   </div>
 
-                  {/* Service */}
+                  {/* Hiring Requirement */}
                   <div>
                     <label className="block text-sm font-bold text-[#cca300] uppercase tracking-widest mb-2">
-                      Service of Interest
+                      Hiring Requirement
                     </label>
-                    <select
-                      name="service"
-                      value={formData.service}
+                    <input
+                      type="text"
+                      name="hiringRequirement"
+                      value={formData.hiringRequirement}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 bg-[rgba(153, 122, 0,0.1)] border border-[#997a00] text-[#1b365d] focus:outline-none focus:border-[#cca300] transition-colors"
-                    >
-                      <option value="">Select a service...</option>
-                      <option value="mechanical">HR Strategy & Advisory</option>
-                      <option value="civil">Policy & Compliance</option>
-                      <option value="equipment-rental">HR Technology Enablement</option>
-                      <option value="manpower-supply">Talent Acquisition</option>
-                      <option value="material-supply">Payroll & Benefits</option>
-                      <option value="electrical">Employee Relations</option>
-                      <option value="valve-maintenance">Performance Management</option>
-                      <option value="metering-skid">HR Analytics & Reporting</option>
-                      <option value="analyzer-shelter">Learning & Development</option>
-                      <option value="dewatering">Workforce Planning</option>
-                      <option value="pumping-station">HR Operations Support</option>
-                    </select>
+                      placeholder="e.g. 10 welders for a project"
+                      className="w-full px-4 py-3 bg-[rgba(153, 122, 0,0.1)] border border-[#997a00] text-[#1b365d] placeholder-[#997a00] focus:outline-none focus:border-[#cca300] transition-colors"
+                    />
                   </div>
 
                   {/* Message */}
@@ -309,6 +337,17 @@ export default function ContactPage() {
               </motion.div>
             )}
           </motion.div>
+        </div>
+      </div>
+
+      <div className="container-custom py-16">
+        <div className="rounded-3xl border border-[#997a00]/30 bg-[linear-gradient(135deg,rgba(43,90,143,0.07),rgba(255,255,255,1))] p-8 md:p-12 text-center">
+          <h2 className="text-3xl md:text-4xl font-bold font-bebas text-[#1b365d] mb-3">
+            Ready to Hire? Ready to Get Hired?
+          </h2>
+          <p className="text-lg text-[#1b365d]/70 max-w-2xl mx-auto">
+            Partner with Humanic HR Solutions today and experience recruitment that delivers results.
+          </p>
         </div>
       </div>
     </div>

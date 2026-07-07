@@ -1,10 +1,12 @@
 // Company Information
 export const COMPANY_NAME = 'Humanic HR Solutions';
 export const COMPANY_TAGLINE = 'Human Excellence Through Smarter HR';
-export const COMPANY_LOCATION = 'Yanbu Al Bahar, Saudi Arabia';
-export const COMPANY_POSTAL = '46424';
-export const COMPANY_PHONE = '+966 14 3915068';
-export const COMPANY_EMAIL = 'info@onetouchsolutions.com';
+export const COMPANY_LOCATION = 'Mangalore, Karnataka, India';
+export const COMPANY_POSTAL = '575001';
+export const COMPANY_PHONE = '+91 9980720316';
+export const COMPANY_PHONE_ALT = '+91 8050920316';
+export const COMPANY_EMAIL = 'info@humanichr.com';
+export const COMPANY_WEBSITE = 'humanichr.com';
 
 // Brand Colors
 export const COLORS = {

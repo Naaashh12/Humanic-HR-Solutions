@@ -31,17 +31,17 @@ export async function generateMetadata({
    File naming: mechanical.jpg, civil.jpg, equipment-rental.jpg, etc.
 ─────────────────────────────────────────────────────────────────────────────── */
 const SERVICE_IMAGE: Record<string, string> = {
-  'mechanical':                 '/services/mechanical.jpg',
-  'civil':                      '/services/civil.jpg',
-  'equipment-rental':           '/services/equipment-rental.jpg',
-  'manpower-supply':            '/services/manpower-supply.jpg',
-  'material-supply':            '/services/material-supply.jpg',
-  'electrical-instrumentation': '/services/electrical.jpg',
-  'valve-maintenance':          '/services/valve-maintenance.jpg',
-  'metering-skid':              '/services/metering-skid.jpg',
-  'analyzer-shelter':           '/services/analyzer-shelter.jpg',
-  'dewatering':                 '/services/dewatering.jpg',
-  'pumping-station':            '/services/pumping-station.jpg',
+  'mechanical': '/services/HRStrategy.jpg',
+  'civil': '/services/Policy.jpg',
+  'equipment-rental': '/services/HRTechnology.jpg',
+  'manpower-supply': '/services/Permanent.jpg',
+  'material-supply': '/services/Contract.jpg',
+  'electrical-instrumentation': '/services/Executive.jpg',
+  'valve-maintenance': '/services/Gulf.jpg',
+  'metering-skid': '/services/bulk.png',
+  'analyzer-shelter': '/services/Payroll.jpg',
+  'dewatering': '/services/HRConsulting.jpg',
+  'pumping-station': '/services/HROperations Support.jpg',
 };
 
 /* ── Page ──────────────────────────────────────────────────────────────────── */
@@ -60,7 +60,7 @@ export default async function ServiceDetailPage({
   const imgSrc = SERVICE_IMAGE[slug] ?? '';
 
   return (
-    <div className="min-h-screen bg-black text-[#e6eaed]">
+    <div className="min-h-screen bg-white text-slate-900">
 
       {/* ══ HERO ══════════════════════════════════════════════════════════════ */}
       <section className="relative pt-24 pb-16 overflow-hidden border-b border-[#997a00]/40">
@@ -74,7 +74,7 @@ export default async function ServiceDetailPage({
         <div className="container-custom relative z-10">
 
           {/* Breadcrumb */}
-          <div className="flex items-center gap-2 text-[10px] uppercase tracking-[0.2em] text-[#e6eaed]/40 mb-8">
+          <div className="flex items-center gap-2 text-[10px] uppercase tracking-[0.2em] text-slate-500 mb-8">
             <Link href="/" className="hover:text-[#cca300] transition-colors">Home</Link>
             <ChevronRight className="w-3 h-3" />
             <Link href="/services" className="hover:text-[#cca300] transition-colors">Services</Link>
@@ -91,7 +91,7 @@ export default async function ServiceDetailPage({
                 HR Services
               </div>
 
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold font-bebas uppercase text-[#e6eaed] leading-tight mb-4">
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold font-bebas uppercase text-slate-900 leading-tight mb-4">
                 {service.title}
               </h1>
 
@@ -101,7 +101,7 @@ export default async function ServiceDetailPage({
                 <div className="h-[2px] w-5  bg-[#997a00]/35" />
               </div>
 
-              <p className="text-base md:text-lg text-[#e6eaed]/72 leading-relaxed max-w-xl mb-8">
+              <p className="text-base md:text-lg text-slate-700 leading-relaxed max-w-xl mb-8">
                 {service.fullDescription}
               </p>
 
@@ -115,7 +115,7 @@ export default async function ServiceDetailPage({
                 </Link>
                 <Link
                   href="/services"
-                  className="inline-flex items-center gap-2 px-6 py-3 border border-[#997a00] text-[#e6eaed]/70 font-bold uppercase text-sm tracking-widest hover:border-[#cca300] hover:text-[#e6eaed] transition-all duration-300"
+                  className="inline-flex items-center gap-2 px-6 py-3 border border-[#997a00] text-slate-700 font-bold uppercase text-sm tracking-widest hover:border-[#cca300] hover:text-slate-900 transition-all duration-300"
                 >
                   <ArrowLeft className="w-4 h-4" />
                   All Services
@@ -138,6 +138,11 @@ export default async function ServiceDetailPage({
                   src={imgSrc}
                   alt={service.title}
                   cellSize={180}
+                  zoom={
+                    slug === "mechanical" ? 1.3 :
+                      slug === "civil" ? 1.2 :
+                        1
+                  }
                   className="relative z-10 drop-shadow-[0_0_30px_rgba(204, 163, 0,0.3)]"
                 />
               </div>
@@ -154,14 +159,14 @@ export default async function ServiceDetailPage({
 
             {/* Features */}
             <div>
-              <h2 className="text-2xl md:text-3xl font-bold font-bebas uppercase text-[#e6eaed] mb-6">
+              <h2 className="text-2xl md:text-3xl font-bold font-bebas uppercase text-slate-900 mb-6">
                 What We <span className="text-[#cca300]">Offer</span>
               </h2>
               <ul className="space-y-3">
                 {service.features.map((f, i) => (
                   <li key={i} className="flex items-start gap-3 group">
                     <CheckCircle2 className="w-5 h-5 text-[#cca300] shrink-0 mt-0.5 group-hover:text-[#ffd700] transition-colors" />
-                    <span className="text-[#e6eaed]/72 text-sm leading-relaxed group-hover:text-[#e6eaed] transition-colors">
+                    <span className="text-slate-700 text-sm leading-relaxed group-hover:text-slate-900 transition-colors">
                       {f}
                     </span>
                   </li>
@@ -171,14 +176,14 @@ export default async function ServiceDetailPage({
 
             {/* Capabilities */}
             <div>
-              <h2 className="text-2xl md:text-3xl font-bold font-bebas uppercase text-[#e6eaed] mb-6">
+              <h2 className="text-2xl md:text-3xl font-bold font-bebas uppercase text-slate-900 mb-6">
                 Our <span className="text-[#cca300]">Capabilities</span>
               </h2>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                 {service.capabilities.map((c, i) => (
                   <div
                     key={i}
-                    className="px-4 py-3 border border-[#997a00]/50 bg-[rgba(153, 122, 0,0.06)] hover:border-[#cca300] hover:bg-[rgba(204, 163, 0,0.10)] transition-all duration-200 text-sm text-[#e6eaed]/68 hover:text-[#e6eaed]"
+                    className="px-4 py-3 border border-[#997a00]/50 bg-[rgba(153, 122, 0,0.06)] hover:border-[#cca300] hover:bg-[rgba(204, 163, 0,0.10)] transition-all duration-200 text-sm text-slate-700 hover:text-slate-900"
                     style={{ clipPath: 'polygon(0 0, calc(100% - 10px) 0, 100% 10px, 100% 100%, 10px 100%, 0 calc(100% - 10px))' }}
                   >
                     <span className="text-[#cca300] mr-2 text-xs">▸</span>
@@ -194,7 +199,7 @@ export default async function ServiceDetailPage({
       {/* ══ HIGHLIGHTS ════════════════════════════════════════════════════════ */}
       <section className="py-16 border-b border-[#997a00]/25">
         <div className="container-custom">
-          <h2 className="text-2xl md:text-3xl font-bold font-bebas uppercase text-[#e6eaed] mb-8 text-center">
+          <h2 className="text-2xl md:text-3xl font-bold font-bebas uppercase text-slate-900 mb-8 text-center">
             Why Choose <span className="text-[#cca300]">Us</span>
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
@@ -207,7 +212,7 @@ export default async function ServiceDetailPage({
                 <div className="text-3xl font-black font-bebas text-[#cca300]/25 group-hover:text-[#cca300]/45 transition-colors mb-2 select-none">
                   {String(i + 1).padStart(2, '0')}
                 </div>
-                <p className="text-sm text-[#e6eaed]/68 group-hover:text-[#e6eaed] transition-colors leading-snug">
+                <p className="text-sm text-slate-700 group-hover:text-slate-900 transition-colors leading-snug">
                   {h}
                 </p>
               </div>
@@ -220,7 +225,7 @@ export default async function ServiceDetailPage({
       {related.length > 0 && (
         <section className="py-16 border-b border-[#997a00]/25">
           <div className="container-custom">
-            <h2 className="text-2xl md:text-3xl font-bold font-bebas uppercase text-[#e6eaed] mb-8">
+            <h2 className="text-2xl md:text-3xl font-bold font-bebas uppercase text-slate-900 mb-8">
               Related <span className="text-[#cca300]">Services</span>
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
@@ -231,10 +236,10 @@ export default async function ServiceDetailPage({
                   className="group p-5 border border-[#997a00]/50 bg-[rgba(153, 122, 0,0.06)] hover:border-[#cca300] hover:bg-[rgba(204, 163, 0,0.12)] transition-all duration-300"
                   style={{ clipPath: 'polygon(0 0, calc(100% - 20px) 0, 100% 20px, 100% 100%, 20px 100%, 0 calc(100% - 20px))' }}
                 >
-                  <h3 className="font-bold font-bebas uppercase text-lg text-[#e6eaed] group-hover:text-[#cca300] transition-colors mb-1">
+                  <h3 className="font-bold font-bebas uppercase text-lg text-slate-900 group-hover:text-[#cca300] transition-colors mb-1">
                     {rel.title}
                   </h3>
-                  <p className="text-xs text-[#e6eaed]/50 group-hover:text-[#e6eaed]/75 transition-colors leading-relaxed">
+                  <p className="text-xs text-slate-600 group-hover:text-slate-800 transition-colors leading-relaxed">
                     {rel.shortDescription}
                   </p>
                   <div className="mt-3 flex items-center gap-1 text-[#cca300] text-xs font-bold uppercase tracking-widest group-hover:gap-2 transition-all">
@@ -251,10 +256,10 @@ export default async function ServiceDetailPage({
       {/* ══ BOTTOM CTA ════════════════════════════════════════════════════════ */}
       <section className="py-14">
         <div className="container-custom text-center">
-          <h2 className="text-3xl md:text-4xl font-bold font-bebas uppercase text-[#e6eaed] mb-3">
+          <h2 className="text-3xl md:text-4xl font-bold font-bebas uppercase text-slate-900 mb-3">
             Ready to Get Started?
           </h2>
-          <p className="text-[#e6eaed]/55 mb-7 max-w-xl mx-auto text-sm">
+          <p className="text-slate-600 mb-7 max-w-xl mx-auto text-sm">
             Contact our team to discuss how {service.title.toLowerCase()} can support your workforce.
           </p>
           <Link

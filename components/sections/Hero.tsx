@@ -4,8 +4,8 @@ import { motion } from 'framer-motion';
 import { useRef } from 'react';
 import { GlowButton } from '@/components/ui/GlowButton';
 import { useInViewAnimation } from '@/hooks/useScrollAnimation';
-import Hyperspeed from '@/components/Hyperspeed';
-import { hyperspeedPresets } from '@/components/HyperSpeedPresets';
+import Threads from '@/components/Threads';
+
 
 export function HeroSection() {
   const { ref, isInView } = useInViewAnimation(false);
@@ -21,6 +21,7 @@ export function HeroSection() {
     },
   };
 
+
   const itemVariants = {
     hidden: { opacity: 0, y: 20 },
     visible: {
@@ -35,10 +36,17 @@ export function HeroSection() {
       ref={ref}
       className="relative w-full min-h-screen bg-[#f8fafc] flex items-center justify-center overflow-hidden pt-14"
     >
-      {/* HYPERSPEED BACKGROUND */}
-      <div className="absolute inset-0 z-0">
-        <Hyperspeed effectOptions={hyperspeedPresets.six as any} />
-      </div>
+      {/* THREADS BACKGROUND */}
+<div className="absolute inset-0 z-0 overflow-hidden">
+  <div className="w-full h-full relative">
+    <Threads
+      color={[0.9176470588235294, 0.7019607843137254, 0.03137254901960784]}
+      amplitude={1.7}
+      distance={0}
+      enableMouseInteraction={false}
+    />
+  </div>
+</div>
 
       {/* VIGNETTE OVERLAY */}
       <div

@@ -102,11 +102,11 @@ export function ServiceCard({
 
             {/* Features for featured cards */}
             {featured && features.length > 0 && (
-              <ul className="mb-4 space-y-1 text-xs md:text-sm text-[#e6eaed]/70">
+              <ul className="mb-4 space-y-1 text-xs md:text-sm text-white">
                 {features.slice(0, 3).map((feature, idx) => (
                   <li key={idx} className="flex items-start">
                     <span className="text-[#cca300] mr-2 mt-1">▸</span>
-                    <span>{feature}</span>
+                    <span className="text-white">{feature}</span>
                   </li>
                 ))}
               </ul>

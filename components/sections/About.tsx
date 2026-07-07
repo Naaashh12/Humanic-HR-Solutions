@@ -56,7 +56,7 @@ export function AboutSection() {
                   muted
                   playsInline
                 >
-                  <source src="/about.mp4" type="video/mp4" />
+                  <source src="/abt.mp4" type="video/mp4" />
                 </video>
               </div>
 

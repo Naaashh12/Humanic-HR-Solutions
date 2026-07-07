@@ -1,5 +1,6 @@
 'use client';
 
+import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { useInViewAnimation } from '@/hooks/useScrollAnimation';
 import { GlowButton } from '@/components/ui/GlowButton';
@@ -8,6 +9,7 @@ import { Phone, Mail, MapPin, Clock } from 'lucide-react';
 
 export function ContactCTA() {
   const { ref, isInView } = useInViewAnimation(true);
+  const [activeContact, setActiveContact] = useState<string | null>(null);
 
   const contactMethods = [
     {
@@ -25,7 +27,7 @@ export function ContactCTA() {
     {
       icon: 'location',
       label: 'Location',
-      value: 'Yanbu Al Bahar, Saudi Arabia',
+      value: 'Mangalore, Karnataka, India',
       link: '#',
     },
     {
@@ -37,11 +39,18 @@ export function ContactCTA() {
   ];
 
   const ContactIcon = ({ type }: { type: string }) => {
-    switch(type) {
-      case 'phone': return <Phone className="w-6 h-6 text-[#2b5a8f] group-hover:text-[#1b365d] transition-colors" />;
-      case 'mail': return <Mail className="w-6 h-6 text-[#2b5a8f] group-hover:text-[#1b365d] transition-colors" />;
-      case 'location': return <MapPin className="w-6 h-6 text-[#2b5a8f] group-hover:text-[#1b365d] transition-colors" />;
-      case 'clock': return <Clock className="w-6 h-6 text-[#2b5a8f] group-hover:text-[#1b365d] transition-colors" />;
+    switch (type) {
+      case 'phone':
+        return <Phone className="w-6 h-6 text-[#cca300] group-hover:text-[#ffd700] transition-colors" />;
+
+      case 'mail':
+        return <Mail className="w-6 h-6 text-[#cca300] group-hover:text-[#ffd700] transition-colors" />;
+
+      case 'location':
+        return <MapPin className="w-6 h-6 text-[#cca300] group-hover:text-[#ffd700] transition-colors" />;
+
+      case 'clock':
+        return <Clock className="w-6 h-6 text-[#cca300] group-hover:text-[#ffd700] transition-colors" />;
       default: return null;
     }
   };
@@ -84,31 +93,32 @@ export function ContactCTA() {
           }}
         >
           {contactMethods.map((method, idx) => (
-              <motion.a
-                key={idx}
-                href={method.link}
-                className="p-4 border border-slate-200 hover:border-[#2b5a8f] bg-slate-50 hover:bg-slate-100/50 transition-all duration-300 group"
-                variants={{
-                  hidden: { opacity: 0, y: 20 },
-                  visible: { opacity: 1, y: 0 },
-                }}
-              >
-                <div className="mb-2">
-                  <ContactIcon type={method.icon} />
-                </div>
-                <div className="text-xs font-bold text-[#2b5a8f] uppercase tracking-widest mb-1">
-                  {method.label}
-                </div>
-                <div className="text-sm text-[#0f172a] group-hover:text-[#2b5a8f] transition-colors break-all">
-                  {method.value}
-                </div>
-              </motion.a>
-            ))}
+            <motion.a
+              key={idx}
+              href={method.link}
+              onClick={() => setActiveContact(method.label)}
+              className={`border border-[#2b5a8f]/20 bg-[#1b365d] p-4 text-white shadow-sm transition-all duration-300 group ${activeContact === method.label ? 'border-[#cca300] bg-[#122844]' : ''}`}
+              variants={{
+                hidden: { opacity: 0, y: 20 },
+                visible: { opacity: 1, y: 0 },
+              }}
+            >
+              <div className="mb-2">
+                <ContactIcon type={method.icon} />
+              </div>
+              <div className="mb-1 text-xs font-bold uppercase tracking-widest text-[#f5d36a] transition-colors duration-300 group-hover:text-[#f5d36a]">
+                {method.label}
+              </div>
+              <div className="break-all text-sm text-white transition-colors duration-300 group-hover:text-[#f5d36a]">
+                {method.value}
+              </div>
+            </motion.a>
+          ))}
         </motion.div>
 
         {/* Main CTA */}
         <motion.div
-          className="p-8 md:p-12 border-2 border-[#2b5a8f] bg-gradient-to-r from-[rgba(43,90,143,0.08)] to-[rgba(43,90,143,0.02)] text-center relative overflow-hidden group"
+          className="p-8 md:p-12 border border-[#2b5a8f] bg-[#1b365d] text-center relative overflow-hidden group"
           initial={{ opacity: 0, scale: 0.95 }}
           animate={isInView ? { opacity: 1, scale: 1 } : {}}
           transition={{ duration: 0.8, delay: 0.2 }}
@@ -117,10 +127,10 @@ export function ContactCTA() {
           <div className="absolute inset-0 bg-gradient-to-r from-[#2b5a8f]/0 via-[#2b5a8f]/5 to-[#2b5a8f]/0 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 
           <div className="relative z-10">
-            <h3 className="text-3xl md:text-4xl font-bold font-bebas text-[#0f172a] mb-4">
+            <h3 className="text-3xl md:text-4xl font-bold font-bebas text-white mb-4">
               Get Your Customized HR Support Today
             </h3>
-            <p className="text-slate-600 mb-8 max-w-2xl mx-auto">
+            <p className="text-slate-200 mb-8 max-w-2xl mx-auto">
               Our team is ready to understand your specific needs and provide tailored HR solutions
             </p>
 
@@ -142,7 +152,7 @@ export function ContactCTA() {
             </div>
 
             {/* Additional info */}
-            <p className="text-xs text-slate-500 mt-8 uppercase tracking-widest">
+            <p className="text-xs text-[#f5d36a] mt-8 uppercase tracking-widest">
               Response within 24 hours • No obligation • Free HR consultation
             </p>
           </div>
