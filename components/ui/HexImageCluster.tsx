@@ -138,7 +138,7 @@ export function HexImageCluster({
 const ringPts = hexPoints(p.cx, p.cy, scaledR, 1);
 const cellPts = hexPoints(p.cx, p.cy, scaledR, 4);
    // inner clipped cell
-          const strokeCol = isCentre ? '#ff1a2e' : '#8c0415';
+          const strokeCol = isCentre ? '#ffd700' : '#997a00';
           const glowF     = isCentre ? `url(#${uid}_glowLg)` : `url(#${uid}_glowSm)`;
 
           return (
@@ -170,7 +170,7 @@ const cellPts = hexPoints(p.cx, p.cy, scaledR, 4);
                 {/* Brand tint — slightly stronger on ring to give depth */}
                 <polygon
                   points={cellPts}
-                  fill={isCentre ? 'rgba(191,6,20,0.08)' : 'rgba(0,0,0,0.25)'}
+                  fill={isCentre ? 'rgba(204, 163, 0,0.08)' : 'rgba(0,0,0,0.25)'}
                 />
 
                 {/* Shine glint */}
@@ -200,7 +200,7 @@ const cellPts = hexPoints(p.cx, p.cy, scaledR, 4);
                 <polygon
                   points={ringPts}
                   fill="none"
-                  stroke="#ff1a2e"
+                  stroke="#ffd700"
                   strokeWidth="2"
                   opacity="0"
                 >

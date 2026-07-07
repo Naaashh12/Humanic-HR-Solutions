@@ -29,8 +29,8 @@ export function GlowButton({
   const baseStyles = 'relative overflow-hidden inline-flex items-center justify-center font-bold letter-spacing tracking-widest transition-all duration-300 transform hover:scale-105';
 
   const variantStyles = {
-    primary: `bg-[${COLORS.redLight}] text-white border-2 border-[${COLORS.redDark}] hover:shadow-[0_0_40px_rgba(191,6,20,0.8),0_0_60px_rgba(140,4,21,0.4)] shadow-[0_0_20px_rgba(191,6,20,0.5),inset_0_0_20px_rgba(255,26,46,0.1)]`,
-    secondary: `bg-transparent text-[${COLORS.grayLight}] border border-[${COLORS.redDark}] hover:bg-[rgba(140,4,21,0.15)] hover:border-[${COLORS.redLight}] hover:shadow-[0_0_20px_rgba(191,6,20,0.4)] hover:text-white`,
+    primary: `bg-[${COLORS.redLight}] text-white border-2 border-[${COLORS.redDark}] hover:shadow-[0_0_40px_rgba(204, 163, 0,0.8),0_0_60px_rgba(153, 122, 0,0.4)] shadow-[0_0_20px_rgba(204, 163, 0,0.5),inset_0_0_20px_rgba(255, 215, 0,0.1)]`,
+    secondary: `bg-transparent text-[${COLORS.grayLight}] border border-[${COLORS.redDark}] hover:bg-[rgba(153, 122, 0,0.15)] hover:border-[${COLORS.redLight}] hover:shadow-[0_0_20px_rgba(204, 163, 0,0.4)] hover:text-white`,
   };
 
   const sizeStyles = {

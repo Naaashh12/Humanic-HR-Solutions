@@ -38,19 +38,19 @@ export function ContactCTA() {
 
   const ContactIcon = ({ type }: { type: string }) => {
     switch(type) {
-      case 'phone': return <Phone className="w-6 h-6 text-[#bf0614] group-hover:text-[#ff1a2e] transition-colors" />;
-      case 'mail': return <Mail className="w-6 h-6 text-[#bf0614] group-hover:text-[#ff1a2e] transition-colors" />;
-      case 'location': return <MapPin className="w-6 h-6 text-[#bf0614] group-hover:text-[#ff1a2e] transition-colors" />;
-      case 'clock': return <Clock className="w-6 h-6 text-[#bf0614] group-hover:text-[#ff1a2e] transition-colors" />;
+      case 'phone': return <Phone className="w-6 h-6 text-[#2b5a8f] group-hover:text-[#1b365d] transition-colors" />;
+      case 'mail': return <Mail className="w-6 h-6 text-[#2b5a8f] group-hover:text-[#1b365d] transition-colors" />;
+      case 'location': return <MapPin className="w-6 h-6 text-[#2b5a8f] group-hover:text-[#1b365d] transition-colors" />;
+      case 'clock': return <Clock className="w-6 h-6 text-[#2b5a8f] group-hover:text-[#1b365d] transition-colors" />;
       default: return null;
     }
   };
 
   return (
-    <section ref={ref as any} className="relative py-20 md:py-32 bg-black overflow-hidden">
+    <section ref={ref as any} className="relative py-20 md:py-32 bg-white overflow-hidden">
       {/* Background effects */}
-      <div className="absolute inset-0 opacity-10">
-        <div className="absolute top-1/2 left-1/2 w-96 h-96 bg-[#bf0614] rounded-full blur-3xl transform -translate-x-1/2 -translate-y-1/2" />
+      <div className="absolute inset-0 opacity-[0.06]">
+        <div className="absolute top-1/2 left-1/2 w-96 h-96 bg-[#2b5a8f] rounded-full blur-3xl transform -translate-x-1/2 -translate-y-1/2" />
       </div>
 
       <div className="container-custom relative z-10">
@@ -60,10 +60,10 @@ export function ContactCTA() {
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8 }}
         >
-          <h2 className="text-4xl md:text-5xl font-bold font-bebas text-[#e6eaed] mb-4">
+          <h2 className="text-4xl md:text-5xl font-bold font-bebas text-[#0f172a] mb-4">
             Ready to Collaborate?
           </h2>
-          <p className="text-lg text-[#e6eaed]/70 max-w-2xl mx-auto">
+          <p className="text-lg text-slate-600 max-w-2xl mx-auto">
             Let's discuss how Golden Pyramids can support your industrial operations
           </p>
         </motion.div>
@@ -87,7 +87,7 @@ export function ContactCTA() {
               <motion.a
                 key={idx}
                 href={method.link}
-                className="p-4 border border-[#8c0415] hover:border-[#bf0614] bg-black/50 hover:bg-[rgba(140,4,21,0.15)] transition-all duration-300 group"
+                className="p-4 border border-slate-200 hover:border-[#2b5a8f] bg-slate-50 hover:bg-slate-100/50 transition-all duration-300 group"
                 variants={{
                   hidden: { opacity: 0, y: 20 },
                   visible: { opacity: 1, y: 0 },
@@ -96,10 +96,10 @@ export function ContactCTA() {
                 <div className="mb-2">
                   <ContactIcon type={method.icon} />
                 </div>
-                <div className="text-xs font-bold text-[#8c0415] uppercase tracking-widest mb-1">
+                <div className="text-xs font-bold text-[#2b5a8f] uppercase tracking-widest mb-1">
                   {method.label}
                 </div>
-                <div className="text-sm text-[#e6eaed] group-hover:text-[#bf0614] transition-colors break-all">
+                <div className="text-sm text-[#0f172a] group-hover:text-[#2b5a8f] transition-colors break-all">
                   {method.value}
                 </div>
               </motion.a>
@@ -108,19 +108,19 @@ export function ContactCTA() {
 
         {/* Main CTA */}
         <motion.div
-          className="p-8 md:p-12 border-2 border-[#bf0614] bg-gradient-to-r from-[rgba(140,4,21,0.2)] to-[rgba(140,4,21,0.05)] text-center relative overflow-hidden group"
+          className="p-8 md:p-12 border-2 border-[#2b5a8f] bg-gradient-to-r from-[rgba(43,90,143,0.08)] to-[rgba(43,90,143,0.02)] text-center relative overflow-hidden group"
           initial={{ opacity: 0, scale: 0.95 }}
           animate={isInView ? { opacity: 1, scale: 1 } : {}}
           transition={{ duration: 0.8, delay: 0.2 }}
         >
           {/* Glowing animation */}
-          <div className="absolute inset-0 bg-gradient-to-r from-[#bf0614]/0 via-[#bf0614]/10 to-[#bf0614]/0 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+          <div className="absolute inset-0 bg-gradient-to-r from-[#2b5a8f]/0 via-[#2b5a8f]/5 to-[#2b5a8f]/0 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 
           <div className="relative z-10">
-            <h3 className="text-3xl md:text-4xl font-bold font-bebas text-[#e6eaed] mb-4">
+            <h3 className="text-3xl md:text-4xl font-bold font-bebas text-[#0f172a] mb-4">
               Get Your Customized Quote Today
             </h3>
-            <p className="text-[#e6eaed]/80 mb-8 max-w-2xl mx-auto">
+            <p className="text-slate-600 mb-8 max-w-2xl mx-auto">
               Our team is ready to understand your specific needs and provide tailored industrial solutions
             </p>
 
@@ -142,7 +142,7 @@ export function ContactCTA() {
             </div>
 
             {/* Additional info */}
-            <p className="text-xs text-[#e6eaed]/60 mt-8 uppercase tracking-widest">
+            <p className="text-xs text-slate-500 mt-8 uppercase tracking-widest">
               Response within 24 hours • No obligation • Free consultation
             </p>
           </div>

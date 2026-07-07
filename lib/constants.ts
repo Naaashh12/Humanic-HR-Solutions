@@ -8,19 +8,31 @@ export const COMPANY_EMAIL = 'info@onetouchsolutions.com';
 
 // Brand Colors
 export const COLORS = {
-  redDark: '#8c0415',
-  redLight: '#bf0614',
-  redNeon: '#ff1a2e',
-  black: '#000000',
-  blackAlt: '#0a0a0a',
-  grayLight: '#e6eaed',
-  ultraDarkRed: '#5c0010',
+  redDark: '#1b365d',
+  redLight: '#2b5a8f',
+  redNeon: '#3b82f6',
+  black: '#f8fafc',
+  blackAlt: '#ffffff',
+  grayLight: '#0f172a',
+  ultraDarkRed: '#1e3a8a',
+  blueDark: '#1b365d',
+  blueLight: '#2b5a8f',
+  blueNeon: '#3b82f6',
+  silverDark: '#94a3b8',
+  silverLight: '#cbd5e1',
+  goldDark: '#997a00',
+  goldLight: '#cca300',
+  goldNeon: '#ffd700',
 } as const;
 
 // Color with transparency
 export const COLOR_RGBA = {
-  redDarkAlpha: 'rgba(140, 4, 21, 0.15)',
-  redLightAlpha: 'rgba(191, 6, 20, 0.08)',
+  redDarkAlpha: 'rgba(43, 90, 143, 0.15)',
+  redLightAlpha: 'rgba(43, 90, 143, 0.08)',
+  blueDarkAlpha: 'rgba(43, 90, 143, 0.15)',
+  blueLightAlpha: 'rgba(43, 90, 143, 0.08)',
+  goldDarkAlpha: 'rgba(153, 122, 0, 0.15)',
+  goldLightAlpha: 'rgba(204, 163, 0, 0.08)',
 } as const;
 
 // Animation timings

@@ -38,7 +38,7 @@ export function CustomCursor() {
         ref={cursorRef}
         className="fixed w-3 h-3 bg-gradient-to-r from-red-600 to-red-500 rounded-full pointer-events-none z-9999 -translate-x-1/2 -translate-y-1/2 shadow-lg"
         style={{
-          boxShadow: '0 0 10px rgba(191, 6, 20, 0.8)',
+          boxShadow: '0 0 10px rgba(204, 163, 0, 0.8)',
         }}
       />
 
@@ -47,7 +47,7 @@ export function CustomCursor() {
         ref={ringRef}
         className="fixed w-8 h-8 border-2 border-red-600 rounded-full pointer-events-none z-9998 -translate-x-1/2 -translate-y-1/2"
         style={{
-          boxShadow: '0 0 15px rgba(140, 4, 21, 0.6), inset 0 0 10px rgba(191, 6, 20, 0.2)',
+          boxShadow: '0 0 15px rgba(153, 122, 0, 0.6), inset 0 0 10px rgba(204, 163, 0, 0.2)',
         }}
       />
     </>

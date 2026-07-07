@@ -28,19 +28,19 @@ const dmSans = DM_Sans({
 });
 
 export const metadata: Metadata = {
-  title: 'Golden Pyramids - Industrial Excellence Through Innovation',
+  title: 'Humanic HR Solutions - Industrial Excellence Through Innovation',
   description:
     'Leading provider of comprehensive industrial services including mechanical services, civil works, equipment rental, and specialized industrial support across Saudi Arabia.',
   keywords:
     'industrial services, equipment rental, mechanical services, civil works, Saudi Arabia, Yanbu',
-  authors: [{ name: 'Golden Pyramids' }],
-  
+  authors: [{ name: 'Humanic HR Solutions' }],
+
   robots: 'index, follow',
   openGraph: {
     type: 'website',
     locale: 'en_US',
     url: 'https://goldenpyramids.com',
-    title: 'Golden Pyramids',
+    title: 'Humanic HR Solutions',
     description:
       'Industrial Excellence Through Innovation - Comprehensive industrial services',
   },

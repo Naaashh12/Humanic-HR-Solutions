@@ -9,21 +9,26 @@ module.exports = {
       colors: {
         // Brand color system
         'brand': {
-          'red-dark': '#8c0415',      // primary deep crimson
-          'red-light': '#bf0614',     // vivid red accents
-          'red-neon': '#ff1a2e',      // neon glow
-          'red-ultra': '#5c0010',     // ultra-dark red
-          'black': '#000000',         // pure black
-          'black-alt': '#0a0a0a',     // slight variation
-          'gray-light': '#e6eaed',    // text on dark
+          'blue-dark': '#1b365d',
+          'blue-light': '#2b5a8f',
+          'blue-neon': '#3b82f6',
+          'silver-dark': '#94a3b8',
+          'silver-light': '#cbd5e1',
+          'gold-dark': '#997a00',      // primary deep crimson
+          'gold-light': '#cca300',     // vivid red accents
+          'gold-neon': '#ffd700',      // neon glow
+          'gold-ultra': '#665200',     // ultra-dark red
+          'black': '#f8fafc',         // light page bg
+          'black-alt': '#ffffff',     // light card bg
+          'gray-light': '#0f172a',    // text on light
         },
       },
       backgroundColor: {
-        'dark': '#000000',
-        'dark-alt': '#0a0a0a',
+        'dark': '#f8fafc',
+        'dark-alt': '#ffffff',
       },
       textColor: {
-        'brand': '#e6eaed',
+        'brand': '#0f172a',
       },
       fontFamily: {
         'bebas': ['Bebas Neue', 'sans-serif'],
@@ -46,10 +51,10 @@ module.exports = {
         },
         glowPulse: {
           '0%, 100%': { 
-            boxShadow: '0 0 20px rgba(140, 4, 21, 0.5), 0 0 40px rgba(140, 4, 21, 0.2)',
+            boxShadow: '0 0 20px rgba(43, 90, 143, 0.3), 0 0 40px rgba(27, 54, 93, 0.1)',
           },
           '50%': { 
-            boxShadow: '0 0 30px rgba(191, 6, 20, 0.8), 0 0 60px rgba(140, 4, 21, 0.4)',
+            boxShadow: '0 0 30px rgba(43, 90, 143, 0.5), 0 0 60px rgba(27, 54, 93, 0.3)',
           },
         },
         rotate: {
@@ -63,11 +68,11 @@ module.exports = {
         glowBounce: {
           '0%': { 
             transform: 'scale(0.95)',
-            boxShadow: '0 0 0 rgba(191, 6, 20, 0.5)',
+            boxShadow: '0 0 0 rgba(43, 90, 143, 0.3)',
           },
           '100%': { 
             transform: 'scale(1)',
-            boxShadow: '0 0 30px rgba(191, 6, 20, 0.8)',
+            boxShadow: '0 0 30px rgba(43, 90, 143, 0.5)',
           },
         },
         glitch: {
@@ -111,8 +116,10 @@ module.exports = {
         },
       },
       boxShadow: {
-        'glow-red': '0 0 20px rgba(140, 4, 21, 0.5), 0 0 40px rgba(140, 4, 21, 0.2)',
-        'glow-red-bright': '0 0 30px rgba(191, 6, 20, 0.8), 0 0 60px rgba(140, 4, 21, 0.4)',
+        'glow-gold': '0 0 20px rgba(153, 122, 0, 0.5), 0 0 40px rgba(153, 122, 0, 0.2)',
+        'glow-gold-bright': '0 0 30px rgba(204, 163, 0, 0.8), 0 0 60px rgba(153, 122, 0, 0.4)',
+        'glow-blue': '0 0 20px rgba(43, 90, 143, 0.3), 0 0 40px rgba(27, 54, 93, 0.1)',
+        'glow-blue-bright': '0 0 30px rgba(43, 90, 143, 0.5), 0 0 60px rgba(27, 54, 93, 0.3)',
       },
       backgroundImage: {
         'shimmer-gradient': 'linear-gradient(90deg, transparent, rgba(255,255,255,0.15), transparent)',

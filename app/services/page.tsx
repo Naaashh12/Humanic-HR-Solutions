@@ -9,13 +9,13 @@ export const metadata = {
 
 export default function ServicesPage() {
   return (
-    <div className="min-h-screen bg-black pt-20">
+    <div className="min-h-screen bg-white pt-20">
       {/* Page Header */}
       <div className="container-custom py-16">
-        <h1 className="text-5xl md:text-7xl font-bold font-bebas text-[#e6eaed] mb-4">
+        <h1 className="text-5xl md:text-7xl font-bold font-bebas text-[#1b365d] mb-4">
           All Services
         </h1>
-        <p className="text-xl text-[#e6eaed]/70 max-w-2xl">
+        <p className="text-xl text-[#1b365d]/70 max-w-2xl">
           Explore our complete range of industrial services designed to meet your operational needs
         </p>
       </div>
@@ -37,16 +37,16 @@ export default function ServicesPage() {
 
       {/* Contact Section */}
       <div className="container-custom py-16">
-        <div className="p-12 border border-[#8c0415] bg-gradient-to-r from-[rgba(140,4,21,0.15)] to-transparent text-center">
-          <h2 className="text-3xl font-bold font-bebas text-[#e6eaed] mb-4">
+        <div className="p-12 border border-[#997a00] bg-gradient-to-r from-[rgba(153, 122, 0,0.15)] to-transparent text-center">
+          <h2 className="text-3xl font-bold font-bebas text-[#1b365d] mb-4">
             Don't See What You Need?
           </h2>
-          <p className="text-[#e6eaed]/70 mb-6">
+          <p className="text-[#1b365d]/70 mb-6">
             Contact our team for custom solutions tailored to your specific requirements
           </p>
           <a
             href="/contact"
-            className="inline-block px-8 py-4 bg-[#bf0614] text-white font-bold uppercase tracking-widest hover:shadow-[0_0_40px_rgba(191,6,20,0.8)] transition-all duration-300"
+            className="inline-block px-8 py-4 bg-[#cca300] text-white font-bold uppercase tracking-widest hover:shadow-[0_0_40px_rgba(204, 163, 0,0.8)] transition-all duration-300"
           >
             Get in Touch
           </a>

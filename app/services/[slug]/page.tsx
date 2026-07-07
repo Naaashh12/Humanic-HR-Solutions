@@ -49,23 +49,23 @@ export default function ServiceDetailPage({ params }: { params: { slug: string }
     <div className="min-h-screen bg-black text-[#e6eaed]">
 
       {/* ══ HERO ══════════════════════════════════════════════════════════════ */}
-      <section className="relative pt-24 pb-16 overflow-hidden border-b border-[#8c0415]/40">
+      <section className="relative pt-24 pb-16 overflow-hidden border-b border-[#997a00]/40">
 
         {/* Ambient background glow */}
         <div className="absolute inset-0 pointer-events-none">
-          <div className="absolute top-0 right-0 w-[700px] h-[700px] bg-[#bf0614] opacity-[0.04] rounded-full blur-3xl translate-x-1/3 -translate-y-1/4" />
-          <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-[#8c0415] opacity-[0.05] rounded-full blur-3xl -translate-x-1/4 translate-y-1/4" />
+          <div className="absolute top-0 right-0 w-[700px] h-[700px] bg-[#cca300] opacity-[0.04] rounded-full blur-3xl translate-x-1/3 -translate-y-1/4" />
+          <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-[#997a00] opacity-[0.05] rounded-full blur-3xl -translate-x-1/4 translate-y-1/4" />
         </div>
 
         <div className="container-custom relative z-10">
 
           {/* Breadcrumb */}
           <div className="flex items-center gap-2 text-[10px] uppercase tracking-[0.2em] text-[#e6eaed]/40 mb-8">
-            <Link href="/" className="hover:text-[#bf0614] transition-colors">Home</Link>
+            <Link href="/" className="hover:text-[#cca300] transition-colors">Home</Link>
             <ChevronRight className="w-3 h-3" />
-            <Link href="/services" className="hover:text-[#bf0614] transition-colors">Services</Link>
+            <Link href="/services" className="hover:text-[#cca300] transition-colors">Services</Link>
             <ChevronRight className="w-3 h-3" />
-            <span className="text-[#bf0614]">{service.title}</span>
+            <span className="text-[#cca300]">{service.title}</span>
           </div>
 
           {/* Two-column layout */}
@@ -73,7 +73,7 @@ export default function ServiceDetailPage({ params }: { params: { slug: string }
 
             {/* LEFT — text content */}
             <div className="flex-1 min-w-0">
-              <div className="inline-block mb-5 px-3 py-1 border border-[#8c0415] bg-[rgba(140,4,21,0.12)] text-[#bf0614] text-[10px] uppercase font-bold tracking-[0.28em]">
+              <div className="inline-block mb-5 px-3 py-1 border border-[#997a00] bg-[rgba(153, 122, 0,0.12)] text-[#cca300] text-[10px] uppercase font-bold tracking-[0.28em]">
                 Industrial Services
               </div>
 
@@ -83,8 +83,8 @@ export default function ServiceDetailPage({ params }: { params: { slug: string }
 
               {/* Red accent line */}
               <div className="flex items-center gap-3 mb-6">
-                <div className="h-[2px] w-14 bg-gradient-to-r from-[#bf0614] to-[#ff1a2e]" />
-                <div className="h-[2px] w-5  bg-[#8c0415]/35" />
+                <div className="h-[2px] w-14 bg-gradient-to-r from-[#cca300] to-[#ffd700]" />
+                <div className="h-[2px] w-5  bg-[#997a00]/35" />
               </div>
 
               <p className="text-base md:text-lg text-[#e6eaed]/72 leading-relaxed max-w-xl mb-8">
@@ -94,14 +94,14 @@ export default function ServiceDetailPage({ params }: { params: { slug: string }
               <div className="flex flex-wrap gap-4">
                 <Link
                   href="/contact"
-                  className="inline-flex items-center gap-2 px-6 py-3 bg-[#bf0614] text-white font-bold uppercase text-sm tracking-widest hover:bg-[#ff1a2e] transition-all duration-300 hover:shadow-[0_0_30px_rgba(191,6,20,0.6)]"
+                  className="inline-flex items-center gap-2 px-6 py-3 bg-[#cca300] text-white font-bold uppercase text-sm tracking-widest hover:bg-[#ffd700] transition-all duration-300 hover:shadow-[0_0_30px_rgba(204, 163, 0,0.6)]"
                 >
                   Get a Quote
                   <ChevronRight className="w-4 h-4" />
                 </Link>
                 <Link
                   href="/services"
-                  className="inline-flex items-center gap-2 px-6 py-3 border border-[#8c0415] text-[#e6eaed]/70 font-bold uppercase text-sm tracking-widest hover:border-[#bf0614] hover:text-[#e6eaed] transition-all duration-300"
+                  className="inline-flex items-center gap-2 px-6 py-3 border border-[#997a00] text-[#e6eaed]/70 font-bold uppercase text-sm tracking-widest hover:border-[#cca300] hover:text-[#e6eaed] transition-all duration-300"
                 >
                   <ArrowLeft className="w-4 h-4" />
                   All Services
@@ -116,7 +116,7 @@ export default function ServiceDetailPage({ params }: { params: { slug: string }
                 <div
                   className="absolute inset-0 pointer-events-none"
                   style={{
-                    background: 'radial-gradient(ellipse at center, rgba(191,6,20,0.15) 0%, transparent 70%)',
+                    background: 'radial-gradient(ellipse at center, rgba(204, 163, 0,0.15) 0%, transparent 70%)',
                     transform: 'scale(1.3)',
                   }}
                 />
@@ -124,7 +124,7 @@ export default function ServiceDetailPage({ params }: { params: { slug: string }
                   src={imgSrc}
                   alt={service.title}
                   cellSize={180}
-                  className="relative z-10 drop-shadow-[0_0_30px_rgba(191,6,20,0.3)]"
+                  className="relative z-10 drop-shadow-[0_0_30px_rgba(204, 163, 0,0.3)]"
                 />
               </div>
             </div>
@@ -134,19 +134,19 @@ export default function ServiceDetailPage({ params }: { params: { slug: string }
       </section>
 
       {/* ══ FEATURES + CAPABILITIES ══════════════════════════════════════════ */}
-      <section className="py-16 border-b border-[#8c0415]/25">
+      <section className="py-16 border-b border-[#997a00]/25">
         <div className="container-custom">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
 
             {/* Features */}
             <div>
               <h2 className="text-2xl md:text-3xl font-bold font-bebas uppercase text-[#e6eaed] mb-6">
-                What We <span className="text-[#bf0614]">Offer</span>
+                What We <span className="text-[#cca300]">Offer</span>
               </h2>
               <ul className="space-y-3">
                 {service.features.map((f, i) => (
                   <li key={i} className="flex items-start gap-3 group">
-                    <CheckCircle2 className="w-5 h-5 text-[#bf0614] shrink-0 mt-0.5 group-hover:text-[#ff1a2e] transition-colors" />
+                    <CheckCircle2 className="w-5 h-5 text-[#cca300] shrink-0 mt-0.5 group-hover:text-[#ffd700] transition-colors" />
                     <span className="text-[#e6eaed]/72 text-sm leading-relaxed group-hover:text-[#e6eaed] transition-colors">
                       {f}
                     </span>
@@ -158,16 +158,16 @@ export default function ServiceDetailPage({ params }: { params: { slug: string }
             {/* Capabilities */}
             <div>
               <h2 className="text-2xl md:text-3xl font-bold font-bebas uppercase text-[#e6eaed] mb-6">
-                Our <span className="text-[#bf0614]">Capabilities</span>
+                Our <span className="text-[#cca300]">Capabilities</span>
               </h2>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                 {service.capabilities.map((c, i) => (
                   <div
                     key={i}
-                    className="px-4 py-3 border border-[#8c0415]/50 bg-[rgba(140,4,21,0.06)] hover:border-[#bf0614] hover:bg-[rgba(191,6,20,0.10)] transition-all duration-200 text-sm text-[#e6eaed]/68 hover:text-[#e6eaed]"
+                    className="px-4 py-3 border border-[#997a00]/50 bg-[rgba(153, 122, 0,0.06)] hover:border-[#cca300] hover:bg-[rgba(204, 163, 0,0.10)] transition-all duration-200 text-sm text-[#e6eaed]/68 hover:text-[#e6eaed]"
                     style={{ clipPath: 'polygon(0 0, calc(100% - 10px) 0, 100% 10px, 100% 100%, 10px 100%, 0 calc(100% - 10px))' }}
                   >
-                    <span className="text-[#bf0614] mr-2 text-xs">▸</span>
+                    <span className="text-[#cca300] mr-2 text-xs">▸</span>
                     {c}
                   </div>
                 ))}
@@ -178,19 +178,19 @@ export default function ServiceDetailPage({ params }: { params: { slug: string }
       </section>
 
       {/* ══ HIGHLIGHTS ════════════════════════════════════════════════════════ */}
-      <section className="py-16 border-b border-[#8c0415]/25">
+      <section className="py-16 border-b border-[#997a00]/25">
         <div className="container-custom">
           <h2 className="text-2xl md:text-3xl font-bold font-bebas uppercase text-[#e6eaed] mb-8 text-center">
-            Why Choose <span className="text-[#bf0614]">Us</span>
+            Why Choose <span className="text-[#cca300]">Us</span>
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
             {service.highlights.map((h, i) => (
               <div
                 key={i}
-                className="relative p-5 border border-[#8c0415]/40 bg-[rgba(140,4,21,0.07)] hover:border-[#bf0614]/70 hover:bg-[rgba(191,6,20,0.12)] transition-all duration-300 group text-center"
+                className="relative p-5 border border-[#997a00]/40 bg-[rgba(153, 122, 0,0.07)] hover:border-[#cca300]/70 hover:bg-[rgba(204, 163, 0,0.12)] transition-all duration-300 group text-center"
                 style={{ clipPath: 'polygon(0 0, calc(100% - 18px) 0, 100% 18px, 100% 100%, 18px 100%, 0 calc(100% - 18px))' }}
               >
-                <div className="text-3xl font-black font-bebas text-[#bf0614]/25 group-hover:text-[#bf0614]/45 transition-colors mb-2 select-none">
+                <div className="text-3xl font-black font-bebas text-[#cca300]/25 group-hover:text-[#cca300]/45 transition-colors mb-2 select-none">
                   {String(i + 1).padStart(2, '0')}
                 </div>
                 <p className="text-sm text-[#e6eaed]/68 group-hover:text-[#e6eaed] transition-colors leading-snug">
@@ -204,26 +204,26 @@ export default function ServiceDetailPage({ params }: { params: { slug: string }
 
       {/* ══ RELATED SERVICES ══════════════════════════════════════════════════ */}
       {related.length > 0 && (
-        <section className="py-16 border-b border-[#8c0415]/25">
+        <section className="py-16 border-b border-[#997a00]/25">
           <div className="container-custom">
             <h2 className="text-2xl md:text-3xl font-bold font-bebas uppercase text-[#e6eaed] mb-8">
-              Related <span className="text-[#bf0614]">Services</span>
+              Related <span className="text-[#cca300]">Services</span>
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
               {related.map(rel => (
                 <Link
                   key={rel.slug}
                   href={`/services/${rel.slug}`}
-                  className="group p-5 border border-[#8c0415]/50 bg-[rgba(140,4,21,0.06)] hover:border-[#bf0614] hover:bg-[rgba(191,6,20,0.12)] transition-all duration-300"
+                  className="group p-5 border border-[#997a00]/50 bg-[rgba(153, 122, 0,0.06)] hover:border-[#cca300] hover:bg-[rgba(204, 163, 0,0.12)] transition-all duration-300"
                   style={{ clipPath: 'polygon(0 0, calc(100% - 20px) 0, 100% 20px, 100% 100%, 20px 100%, 0 calc(100% - 20px))' }}
                 >
-                  <h3 className="font-bold font-bebas uppercase text-lg text-[#e6eaed] group-hover:text-[#bf0614] transition-colors mb-1">
+                  <h3 className="font-bold font-bebas uppercase text-lg text-[#e6eaed] group-hover:text-[#cca300] transition-colors mb-1">
                     {rel.title}
                   </h3>
                   <p className="text-xs text-[#e6eaed]/50 group-hover:text-[#e6eaed]/75 transition-colors leading-relaxed">
                     {rel.shortDescription}
                   </p>
-                  <div className="mt-3 flex items-center gap-1 text-[#bf0614] text-xs font-bold uppercase tracking-widest group-hover:gap-2 transition-all">
+                  <div className="mt-3 flex items-center gap-1 text-[#cca300] text-xs font-bold uppercase tracking-widest group-hover:gap-2 transition-all">
                     <span>View Service</span>
                     <ChevronRight className="w-3 h-3" />
                   </div>
@@ -245,7 +245,7 @@ export default function ServiceDetailPage({ params }: { params: { slug: string }
           </p>
           <Link
             href="/contact"
-            className="inline-flex items-center gap-2 px-8 py-4 bg-[#bf0614] text-white font-bold uppercase tracking-widest hover:bg-[#ff1a2e] transition-all duration-300 hover:shadow-[0_0_40px_rgba(191,6,20,0.6)]"
+            className="inline-flex items-center gap-2 px-8 py-4 bg-[#cca300] text-white font-bold uppercase tracking-widest hover:bg-[#ffd700] transition-all duration-300 hover:shadow-[0_0_40px_rgba(204, 163, 0,0.6)]"
           >
             Contact Us Today
             <ChevronRight className="w-5 h-5" />

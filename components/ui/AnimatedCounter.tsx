@@ -30,9 +30,9 @@ export function AnimatedCounter({
       ref={ref as any}
       className={`text-center ${className}`}
     >
-      <div className="text-4xl md:text-5xl font-bold text-gradient-red mb-2">
+      <div className="text-4xl md:text-5xl font-bold text-gradient-gold mb-2">
         {prefix}
-        <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#bf0614] to-[#ff1a2e]">
+        <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#cca300] to-[#ffd700]">
           {count.toLocaleString()}
         </span>
         {suffix}
