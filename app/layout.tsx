@@ -5,6 +5,7 @@ import { Navbar } from '@/components/layout/Navbar';
 import { Footer } from '@/components/layout/Footer';
 import { CustomCursor } from '@/components/ui/CustomCursor';
 import { ScrollProgressBar } from '@/components/ui/ScrollProgressBar';
+import { WhatsAppButton } from '@/components/ui/WhatsAppButton';
 import { cn } from "@/lib/utils";
 import type { Metadata, Viewport } from 'next';
 
@@ -71,6 +72,9 @@ export default function RootLayout({
 
         {/* Main content */}
         <main>{children}</main>
+
+        {/* Floating WhatsApp button */}
+        <WhatsAppButton />
 
         {/* Footer */}
         <Footer />

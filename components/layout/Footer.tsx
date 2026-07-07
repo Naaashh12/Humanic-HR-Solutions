@@ -2,6 +2,7 @@
 
 import Link from 'next/link';
 import { Linkedin, Twitter, Instagram, MapPin, Phone, Mail } from 'lucide-react';
+import { WhatsAppButton } from '@/components/ui/WhatsAppButton';
 import {
   COMPANY_NAME,
   COMPANY_LOCATION,
@@ -459,6 +460,7 @@ export function Footer() {
 
           {/* Social icons */}
           <div className="flex items-center gap-6">
+            <WhatsAppButton variant="footer" />
             {SOCIAL_LINKS.map((social) => {
               let Icon = Linkedin;
               if (social.platform === 'twitter') Icon = Twitter;

@@ -130,9 +130,6 @@ export default function Home() {
                   Skilled roles for growing teams
                 </h2>
               </div>
-              <p className="text-sm text-slate-600 max-w-xl">
-                We help employers fill critical roles quickly with dependable talent across technical, operational, and leadership functions.
-              </p>
             </div>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
