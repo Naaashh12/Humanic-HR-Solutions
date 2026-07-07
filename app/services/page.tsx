@@ -3,8 +3,8 @@ import { SERVICES } from '@/lib/services-data';
 import { ServiceCard } from '@/components/ui/ServiceCard';
 
 export const metadata = {
-  title: 'Our Services - Golden Pyramids',
-  description: 'Explore all 11 comprehensive industrial services offered by Golden Pyramids',
+  title: 'Our Services - Humanic HR Solutions',
+  description: 'Explore all 11 comprehensive HR services offered by Humanic HR Solutions',
 };
 
 export default function ServicesPage() {
@@ -16,7 +16,7 @@ export default function ServicesPage() {
           All Services
         </h1>
         <p className="text-xl text-[#1b365d]/70 max-w-2xl">
-          Explore our complete range of industrial services designed to meet your operational needs
+          Explore our complete range of HR services designed to meet your people operations needs
         </p>
       </div>
 
@@ -42,7 +42,7 @@ export default function ServicesPage() {
             Don't See What You Need?
           </h2>
           <p className="text-[#1b365d]/70 mb-6">
-            Contact our team for custom solutions tailored to your specific requirements
+            Contact our team for custom HR solutions tailored to your specific requirements
           </p>
           <a
             href="/contact"

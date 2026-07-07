@@ -320,7 +320,7 @@ export function Footer() {
               {COMPANY_NAME}
             </h3>
             <p className="text-slate-300 text-sm leading-relaxed mb-4">
-              Leading provider of industrial solutions and services across Saudi Arabia and the Gulf region.
+              Leading provider of HR solutions and people services across Saudi Arabia and the Gulf region.
             </p>
             <div className="space-y-2 text-sm">
               <div className="flex items-start gap-3 text-slate-300 hover:text-[#ffd700] transition-colors">

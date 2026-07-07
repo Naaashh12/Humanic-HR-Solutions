@@ -1,6 +1,6 @@
 // Company Information
-export const COMPANY_NAME = 'Golden Pyramids';
-export const COMPANY_TAGLINE = 'Industrial Excellence Through Innovation';
+export const COMPANY_NAME = 'Humanic HR Solutions';
+export const COMPANY_TAGLINE = 'Human Excellence Through Smarter HR';
 export const COMPANY_LOCATION = 'Yanbu Al Bahar, Saudi Arabia';
 export const COMPANY_POSTAL = '46424';
 export const COMPANY_PHONE = '+966 14 3915068';
@@ -116,9 +116,9 @@ export const FOOTER_SECTIONS = {
   services: {
     title: 'Services',
     links: [
-      { label: 'Mechanical Services', href: '/services/mechanical' },
-      { label: 'Civil Works', href: '/services/civil' },
-      { label: 'Equipment Rental', href: '/services/equipment-rental' },
+      { label: 'HR Strategy & Advisory', href: '/services/mechanical' },
+      { label: 'Policy & Compliance', href: '/services/civil' },
+      { label: 'HR Technology Enablement', href: '/services/equipment-rental' },
     ],
   },
   contact: {

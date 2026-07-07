@@ -10,7 +10,7 @@ export function AboutSection() {
 
   const stats = [
     { label: 'Years Experience', value: 5, icon: Award },
-    { label: 'Active Projects', value: 50, icon: TrendingUp },
+    { label: 'Active Clients', value: 50, icon: TrendingUp },
     { label: 'Team Members', value: 150, icon: Users },
     { label: 'Client Satisfaction', value: 100, suffix: '%', icon: Wrench },
   ];
@@ -84,22 +84,22 @@ export function AboutSection() {
             <h2 className="text-4xl md:text-5xl font-bold font-bebas text-[#0f172a] mb-6">
               Trusted Partner in
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#1b365d] to-[#2b5a8f] block">
-                Industrial Solutions
+                HR Solutions
               </span>
             </h2>
 
             {/* Description */}
             <p className="text-slate-600 text-lg leading-relaxed mb-6">
-              Golden Pyramids is a leading provider of comprehensive industrial services across Saudi Arabia and the Gulf region. With over two decades of experience, we specialize in delivering excellence across mechanical services, civil works, equipment rental, and specialized industrial support.
+              Humanic HR Solutions is a leading provider of comprehensive HR services across Saudi Arabia and the Gulf region. With deep people operations experience, we specialize in delivering excellence across HR strategy, recruitment, payroll, compliance, and employee support.
             </p>
 
             {/* Key points */}
             <div className="space-y-3 mb-8">
               {[
-                'Certified technicians with industry expertise',
-                'State-of-the-art equipment and technology',
-                'ISO 9001 certified processes and quality assurance',
-                ' 24/7 operational support and emergency response',
+                'Certified HR professionals with industry expertise',
+                'Modern HR tools, data, and people technology',
+                'Structured processes and quality assurance',
+                ' 24/7 HR support and urgent response',
               ].map((point, idx) => (
                 <div key={idx} className="flex items-start gap-3">
                   <div className="w-2 h-2 bg-gradient-to-r from-[#2b5a8f] to-[#cbd5e1] rounded-full mt-2 flex-shrink-0" />

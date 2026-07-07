@@ -8,56 +8,56 @@ export default function CareersPage() {
   const positions = [
     {
       id: 1,
-      title: 'Senior Mechanical Engineer',
-      department: 'Engineering',
+      title: 'Senior HR Consultant',
+      department: 'HR Advisory',
       type: 'Full-Time',
       experience: '5+ years',
-      description: 'Lead mechanical design and maintenance projects across industrial clients',
+      description: 'Lead HR advisory projects across client organizations',
       location: 'Yanbu',
     },
     {
       id: 2,
-      title: 'Civil Supervisor',
-      department: 'Construction',
+      title: 'Talent Acquisition Lead',
+      department: 'Recruitment',
       type: 'Full-Time',
       experience: '5+ years',
-      description: 'Oversee civil works projects and manage team operations',
+      description: 'Oversee hiring campaigns and manage recruitment operations',
       location: 'Yanbu',
     },
     {
       id: 3,
-      title: 'Equipment Operator',
-      department: 'Operations',
+      title: 'Payroll Specialist',
+      department: 'Payroll Operations',
       type: 'Full-Time',
       experience: '2+ years',
-      description: 'Operate and maintain industrial equipment with precision',
+      description: 'Manage payroll inputs, records, and employee pay support with precision',
       location: 'Yanbu',
     },
     {
       id: 4,
-      title: 'Electrical Technician',
-      department: 'Electrical',
+      title: 'Employee Relations Specialist',
+      department: 'Employee Relations',
       type: 'Full-Time',
       experience: '3+ years',
-      description: 'Installation and maintenance of electrical systems',
+      description: 'Support workplace cases, employee communication, and HR documentation',
       location: 'Yanbu',
     },
     {
       id: 5,
-      title: 'Project Manager',
-      department: 'Management',
+      title: 'HR Project Manager',
+      department: 'HR Delivery',
       type: 'Full-Time',
       experience: '4+ years',
-      description: 'Manage industrial service projects from planning to completion',
+      description: 'Manage HR service projects from planning to completion',
       location: 'Yanbu',
     },
     {
       id: 6,
-      title: 'Safety Officer',
-      department: 'Health & Safety',
+      title: 'Compliance Officer',
+      department: 'HR Compliance',
       type: 'Full-Time',
       experience: '3+ years',
-      description: 'Ensure workplace safety standards and compliance',
+      description: 'Ensure HR policy standards, documentation, and compliance',
       location: 'Yanbu',
     },
   ];
@@ -66,7 +66,7 @@ export default function CareersPage() {
     { icon: Briefcase, title: 'Competitive Salary', description: 'Industry-leading compensation packages' },
     { icon: TrendingUp, title: 'Career Growth', description: 'Professional development and advancement opportunities' },
     { icon: Users, title: 'Team Culture', description: 'Collaborative, inclusive work environment' },
-    { icon: MapPin, title: 'Modern Facilities', description: 'State-of-the-art equipment and safe workplaces' },
+    { icon: MapPin, title: 'Modern Workplace', description: 'Smart HR tools and supportive workspaces' },
   ];
 
   return (
@@ -82,7 +82,7 @@ export default function CareersPage() {
             Join Our Team
           </h1>
           <p className="text-xl text-[#1b365d]/70 max-w-2xl">
-            Build your career with Golden Pyramids. We're looking for talented professionals to join our growing team.
+            Build your career with Humanic HR Solutions. We're looking for talented HR professionals to join our growing team.
           </p>
         </div>
       </div>
@@ -164,19 +164,19 @@ export default function CareersPage() {
         <div className="p-12 rounded-xl border border-[#997a00] bg-[#1b365d]">
           <h2 className="text-3xl font-bold font-bebas text-[#e6eaed] mb-4">Our Company Culture</h2>
           <p className="text-[#e6eaed]/80 mb-6">
-            At Golden Pyramids, we believe in excellence, innovation, and teamwork. Our culture is built on:
+            At Humanic HR Solutions, we believe in excellence, trust, and teamwork. Our culture is built on:
           </p>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <div>
               <h4 className="font-bold text-[#cca300] mb-2">Excellence</h4>
               <p className="text-[#e6eaed]/70 text-sm">
-                We strive for the highest standards in every project and interaction.
+                We strive for the highest standards in every client engagement and employee interaction.
               </p>
             </div>
             <div>
-              <h4 className="font-bold text-[#cca300] mb-2">Safety First</h4>
+              <h4 className="font-bold text-[#cca300] mb-2">People First</h4>
               <p className="text-[#e6eaed]/70 text-sm">
-                Our employees' wellbeing is our top priority in all operations.
+                Our employees' wellbeing is our top priority in all decisions.
               </p>
             </div>
             <div>

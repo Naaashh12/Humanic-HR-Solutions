@@ -103,8 +103,8 @@ export function ClientsShowcase() {
   const achievements = [
     { icon: 'star', label: '100% Satisfaction', value: 'Client Rating' },
     { icon: 'award', label: '50+', value: 'Active Projects' },
-    { icon: 'check', label: '500+', value: 'Equipment Assets' },
-    { icon: 'zap', label: '24/7', value: 'Support Available' },
+    { icon: 'check', label: '500+', value: 'Talent Profiles' },
+    { icon: 'zap', label: '24/7', value: 'HR Support' },
   ];
 
   const AchievementIcon = ({ type }: { type: string }) => {
@@ -143,11 +143,11 @@ export function ClientsShowcase() {
                 textShadow: '2px 2px 0 #cbd5e1, 4px 4px 0 #2b5a8f',
               }}
             >
-              Trusted by Industry Leaders
+            Trusted by People Leaders
             </span>
           </h2>
           <p className="text-lg text-slate-600 max-w-2xl mx-auto">
-            Serving prestigious clients across energy, manufacturing, construction, and logistics sectors
+            Supporting growing employers across energy, manufacturing, construction, and logistics sectors
           </p>
         </motion.div>
 
@@ -236,23 +236,23 @@ export function ClientsShowcase() {
         >
           {[
             {
-              title: 'Metering Skid Installation',
-              description: 'Advanced flow measurement systems for custody transfer',
+              title: 'HR Analytics Reporting',
+              description: 'Clear workforce insight for leadership decisions',
               size: 'md:col-span-2',
             },
             {
-              title: 'Equipment Rental Fleet',
-              description: '500+ pieces of modern equipment',
+              title: 'Talent Pipeline Network',
+              description: '500+ qualified talent profiles',
               size: 'md:col-span-1',
             },
             {
-              title: 'Civil Infrastructure',
-              description: 'Large-scale construction projects',
+              title: 'Policy & Compliance',
+              description: 'Clear HR standards for growing teams',
               size: 'md:col-span-1',
             },
             {
-              title: 'Pump Station Operations',
-              description: '24/7 operational support and monitoring',
+              title: 'HR Operations Support',
+              description: '24/7 employee support and monitoring',
               size: 'md:col-span-2',
             },
           ].map((project, idx) => (

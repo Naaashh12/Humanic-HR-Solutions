@@ -50,7 +50,7 @@ export default function ContactPage() {
           Get in Touch
         </h1>
         <p className="text-xl text-[#1b365d]/70">
-          Let's discuss how Golden Pyramids can support your industrial operations
+          Let's discuss how Humanic HR Solutions can support your people operations
         </p>
       </div>
 
@@ -126,7 +126,7 @@ export default function ContactPage() {
                 </li>
                 <li className="flex items-center gap-2">
                   <span className="w-2 h-2 bg-[#cca300]" />
-                  Emergency support available 24/7
+                  Urgent HR support available 24/7
                 </li>
                 <li className="flex items-center gap-2">
                   <span className="w-2 h-2 bg-[#cca300]" />
@@ -228,17 +228,17 @@ export default function ContactPage() {
                       className="w-full px-4 py-3 bg-[rgba(153, 122, 0,0.1)] border border-[#997a00] text-[#1b365d] focus:outline-none focus:border-[#cca300] transition-colors"
                     >
                       <option value="">Select a service...</option>
-                      <option value="mechanical">Mechanical Services</option>
-                      <option value="civil">Civil Works</option>
-                      <option value="equipment-rental">Equipment Rental</option>
-                      <option value="manpower-supply">Manpower Supply</option>
-                      <option value="material-supply">Material Supply</option>
-                      <option value="electrical">Electrical & Instrumentation</option>
-                      <option value="valve-maintenance">Valve Maintenance</option>
-                      <option value="metering-skid">Metering Skid Installation</option>
-                      <option value="analyzer-shelter">Analyzer Shelter Repair</option>
-                      <option value="dewatering">Dewatering Systems</option>
-                      <option value="pumping-station">Pumping Station Maintenance</option>
+                      <option value="mechanical">HR Strategy & Advisory</option>
+                      <option value="civil">Policy & Compliance</option>
+                      <option value="equipment-rental">HR Technology Enablement</option>
+                      <option value="manpower-supply">Talent Acquisition</option>
+                      <option value="material-supply">Payroll & Benefits</option>
+                      <option value="electrical">Employee Relations</option>
+                      <option value="valve-maintenance">Performance Management</option>
+                      <option value="metering-skid">HR Analytics & Reporting</option>
+                      <option value="analyzer-shelter">Learning & Development</option>
+                      <option value="dewatering">Workforce Planning</option>
+                      <option value="pumping-station">HR Operations Support</option>
                     </select>
                   </div>
 
@@ -252,7 +252,7 @@ export default function ContactPage() {
                       value={formData.message}
                       onChange={handleChange}
                       required
-                      placeholder="Tell us about your project or requirements..."
+                      placeholder="Tell us about your HR needs or requirements..."
                       rows={4}
                       className="w-full px-4 py-3 bg-[rgba(153, 122, 0,0.1)] border border-[#997a00] text-[#1b365d] placeholder-[#997a00] focus:outline-none focus:border-[#cca300] transition-colors resize-none"
                     />

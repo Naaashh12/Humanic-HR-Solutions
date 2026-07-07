@@ -77,7 +77,7 @@ export function HeroSection() {
           className="text-sm md:text-base font-bold text-[#cca300] uppercase tracking-widest mb-4 font-bebas"
           variants={itemVariants}
         >
-          Welcome to the Next Level
+          Welcome to Smarter HR
         </motion.p>
 
         {/* Main Heading */}
@@ -85,11 +85,11 @@ export function HeroSection() {
           className="text-5xl md:text-7xl lg:text-8xl font-bold font-bebas text-[#0f172a] mb-6 leading-tight"
           variants={itemVariants}
         >
-          Industrial{' '}
+          Human{' '}
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#1b365d] via-[#2b5a8f] to-[#3b82f6]">
             Excellence
           </span>
-          <br /> Through Innovation
+          <br /> Through Smarter HR
         </motion.h1>
 
         {/* Subheading */}
@@ -97,8 +97,8 @@ export function HeroSection() {
           className="text-lg md:text-xl text-slate-600 mb-8 max-w-2xl mx-auto leading-relaxed font-dm-sans"
           variants={itemVariants}
         >
-          Delivering comprehensive industrial solutions across mechanical services, civil works,
-          equipment rental, and specialized industrial support across Saudi Arabia.
+          Delivering comprehensive HR solutions across recruitment, payroll, compliance,
+          employee relations, and workforce support across Saudi Arabia.
         </motion.p>
 
         {/* CTA Buttons */}
@@ -121,8 +121,8 @@ export function HeroSection() {
         >
           {[
             { label: '11+', value: 'Services' },
-            { label: '500+', value: 'Equipment' },
-            { label: '24/7', value: 'Support' },
+            { label: '500+', value: 'Talent Pool' },
+            { label: '24/7', value: 'HR Support' },
           ].map((stat, idx) => (
             <div
               key={idx}

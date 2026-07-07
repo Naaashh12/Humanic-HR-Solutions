@@ -4,12 +4,12 @@ import { motion } from 'framer-motion';
 
 export const EquipmentSection = () => {
   const equipment = [
-    { name: 'Excavators', emoji: '🏗️' },
-    { name: 'Cranes', emoji: '🏗️' },
-    { name: 'Forklifts', emoji: '🚜' },
-    { name: 'Bobcat Loaders', emoji: '🚜' },
-    { name: 'Dump Trucks', emoji: '🚛' },
-    { name: 'Construction Equipment', emoji: '🏗️' },
+    { name: 'Recruitment Support', emoji: '🏗️' },
+    { name: 'Payroll Support', emoji: '🏗️' },
+    { name: 'HR Compliance', emoji: '🚜' },
+    { name: 'Employee Relations', emoji: '🚜' },
+    { name: 'Workforce Planning', emoji: '🚛' },
+    { name: 'HR Technology', emoji: '🏗️' },
   ];
 
   return (
@@ -24,14 +24,14 @@ export const EquipmentSection = () => {
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-bold text-dark-bg mb-4">
-            Equipment <span className="text-gold">Rental</span>
+            HR <span className="text-gold">Support</span>
           </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Premium quality equipment available for your project needs
+            Practical HR services available for your workforce needs
           </p>
         </motion.div>
 
-        {/* Equipment Grid */}
+        {/* HR Support Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {equipment.map((item, i) => (
             <motion.div
@@ -53,13 +53,13 @@ export const EquipmentSection = () => {
               <h3 className="text-xl font-bold text-dark-bg mb-3 group-hover:text-gold transition-colors">
                 {item.name}
               </h3>
-              <p className="text-gray-600 mb-4">Professional grade equipment</p>
+              <p className="text-gray-600 mb-4">Professional HR support</p>
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 className="btn-primary text-sm"
               >
-                Request Quote
+                Request Support
               </motion.button>
             </motion.div>
           ))}
@@ -78,7 +78,7 @@ export const EquipmentSection = () => {
             whileTap={{ scale: 0.95 }}
             className="btn-primary text-lg"
           >
-            View All Equipment
+            View All HR Services
           </motion.button>
         </motion.div>
       </div>

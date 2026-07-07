@@ -28,11 +28,11 @@ const dmSans = DM_Sans({
 });
 
 export const metadata: Metadata = {
-  title: 'Humanic HR Solutions - Industrial Excellence Through Innovation',
+  title: 'Humanic HR Solutions - Human Excellence Through Smarter HR',
   description:
-    'Leading provider of comprehensive industrial services including mechanical services, civil works, equipment rental, and specialized industrial support across Saudi Arabia.',
+    'Leading provider of comprehensive HR services including HR strategy, recruitment, payroll, compliance, employee relations, and workforce support across Saudi Arabia.',
   keywords:
-    'industrial services, equipment rental, mechanical services, civil works, Saudi Arabia, Yanbu',
+    'HR services, recruitment, payroll, compliance, employee relations, workforce planning, Saudi Arabia, Yanbu',
   authors: [{ name: 'Humanic HR Solutions' }],
 
   robots: 'index, follow',
@@ -42,7 +42,7 @@ export const metadata: Metadata = {
     url: 'https://goldenpyramids.com',
     title: 'Humanic HR Solutions',
     description:
-      'Industrial Excellence Through Innovation - Comprehensive industrial services',
+      'Human Excellence Through Smarter HR - Comprehensive HR services',
   },
 };
 

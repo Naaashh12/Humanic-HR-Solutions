@@ -88,7 +88,7 @@ export default async function ServiceDetailPage({
             {/* LEFT — text content */}
             <div className="flex-1 min-w-0">
               <div className="inline-block mb-5 px-3 py-1 border border-[#997a00] bg-[rgba(153, 122, 0,0.12)] text-[#cca300] text-[10px] uppercase font-bold tracking-[0.28em]">
-                Industrial Services
+                HR Services
               </div>
 
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold font-bebas uppercase text-[#e6eaed] leading-tight mb-4">
@@ -110,7 +110,7 @@ export default async function ServiceDetailPage({
                   href="/contact"
                   className="inline-flex items-center gap-2 px-6 py-3 bg-[#cca300] text-white font-bold uppercase text-sm tracking-widest hover:bg-[#ffd700] transition-all duration-300 hover:shadow-[0_0_30px_rgba(204, 163, 0,0.6)]"
                 >
-                  Get a Quote
+                  Request Support
                   <ChevronRight className="w-4 h-4" />
                 </Link>
                 <Link
@@ -255,7 +255,7 @@ export default async function ServiceDetailPage({
             Ready to Get Started?
           </h2>
           <p className="text-[#e6eaed]/55 mb-7 max-w-xl mx-auto text-sm">
-            Contact our team to discuss how {service.title.toLowerCase()} can support your operations.
+            Contact our team to discuss how {service.title.toLowerCase()} can support your workforce.
           </p>
           <Link
             href="/contact"

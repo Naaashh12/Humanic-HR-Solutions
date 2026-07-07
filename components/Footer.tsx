@@ -34,10 +34,10 @@ export const Footer = () => {
           >
             <h3 className="text-lg font-bold text-gold mb-4">Services</h3>
             <ul className="space-y-2">
-              <li><a href="/#services" className="text-gray-400 hover:text-gold transition-colors">Equipment Rental</a></li>
-              <li><a href="/#services" className="text-gray-400 hover:text-gold transition-colors">Manpower Supply</a></li>
-              <li><a href="/#services" className="text-gray-400 hover:text-gold transition-colors">Material Supply</a></li>
-              <li><a href="/#services" className="text-gray-400 hover:text-gold transition-colors">Industrial Services</a></li>
+              <li><a href="/#services" className="text-gray-400 hover:text-gold transition-colors">HR Strategy</a></li>
+              <li><a href="/#services" className="text-gray-400 hover:text-gold transition-colors">Talent Acquisition</a></li>
+              <li><a href="/#services" className="text-gray-400 hover:text-gold transition-colors">Payroll & Benefits</a></li>
+              <li><a href="/#services" className="text-gray-400 hover:text-gold transition-colors">HR Operations</a></li>
             </ul>
           </motion.div>
 
@@ -84,7 +84,7 @@ export const Footer = () => {
             viewport={{ once: true }}
             className="text-center text-gray-500 text-sm"
           >
-            © {currentYear} One Touch Solutions. All rights reserved.
+            © {currentYear} Humanic HR Solutions. All rights reserved.
           </motion.p>
         </div>
       </div>

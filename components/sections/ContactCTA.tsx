@@ -64,7 +64,7 @@ export function ContactCTA() {
             Ready to Collaborate?
           </h2>
           <p className="text-lg text-slate-600 max-w-2xl mx-auto">
-            Let's discuss how Golden Pyramids can support your industrial operations
+            Let's discuss how Humanic HR Solutions can support your people operations
           </p>
         </motion.div>
 
@@ -118,10 +118,10 @@ export function ContactCTA() {
 
           <div className="relative z-10">
             <h3 className="text-3xl md:text-4xl font-bold font-bebas text-[#0f172a] mb-4">
-              Get Your Customized Quote Today
+              Get Your Customized HR Support Today
             </h3>
             <p className="text-slate-600 mb-8 max-w-2xl mx-auto">
-              Our team is ready to understand your specific needs and provide tailored industrial solutions
+              Our team is ready to understand your specific needs and provide tailored HR solutions
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
@@ -130,7 +130,7 @@ export function ContactCTA() {
                 variant="primary"
                 size="lg"
               >
-                Start Your Project
+                Start Your HR Request
               </GlowButton>
               <GlowButton
                 href="/services"
@@ -143,7 +143,7 @@ export function ContactCTA() {
 
             {/* Additional info */}
             <p className="text-xs text-slate-500 mt-8 uppercase tracking-widest">
-              Response within 24 hours • No obligation • Free consultation
+              Response within 24 hours • No obligation • Free HR consultation
             </p>
           </div>
         </motion.div>

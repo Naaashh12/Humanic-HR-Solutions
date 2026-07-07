@@ -32,13 +32,13 @@ export function ServicesGrid() {
             Our Services
           </div>
           <h2 className="text-4xl md:text-5xl font-bold font-bebas text-[#0f172a] mb-4">
-            Comprehensive Industrial
+            Comprehensive HR
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#1b365d] to-[#2b5a8f] block">
               Solutions
             </span>
           </h2>
           <p className="text-lg text-slate-600 max-w-2xl mx-auto">
-            Explore our complete range of industrial services designed to meet your operational needs
+            Explore our complete range of HR services designed to meet your people operations needs
           </p>
         </motion.div>
 
@@ -91,16 +91,16 @@ export function ServicesGrid() {
           transition={{ duration: 0.8, delay: 0.3 }}
         >
           <h3 className="text-2xl md:text-3xl font-bold font-bebas text-[#0f172a] mb-4">
-            Need Custom Solutions?
+            Need Custom HR Solutions?
           </h3>
           <p className="text-slate-600 mb-6 max-w-2xl mx-auto">
-            Contact our team to discuss your specific requirements and how we can support your operations
+            Contact our team to discuss your specific requirements and how we can support your workforce
           </p>
           <a
             href="/contact"
             className="inline-flex items-center gap-2 px-6 py-3 border border-[#2b5a8f] text-[#2b5a8f] font-bold uppercase tracking-widest hover:bg-[rgba(43,90,143,0.08)] transition-all duration-300 hover:shadow-[0_0_20px_rgba(43,90,143,0.15)]"
           >
-            Get a Quote
+            Request Support
             <span>→</span>
           </a>
         </motion.div>
