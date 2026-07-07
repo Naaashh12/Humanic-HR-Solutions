@@ -5,15 +5,22 @@ import { getServiceBySlug, getAllServiceSlugs, getRelatedServices } from '@/lib/
 import { HexImageCluster } from '@/components/ui/HexImageCluster';
 
 /* ── Static params ─────────────────────────────────────────────────────────── */
-export function generateStaticParams() {
+export async function generateStaticParams() {
   return getAllServiceSlugs().map(slug => ({ slug }));
 }
 
-export function generateMetadata({ params }: { params: { slug: string } }) {
-  const service = getServiceBySlug(params.slug);
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}) {
+  const { slug } = await params;
+
+  const service = getServiceBySlug(slug);
   if (!service) return {};
+
   return {
-    title: `${service.title} — Golden Pyramids`,
+    title: `${service.title} — Humanic HR Solutions`,
     description: service.shortDescription,
   };
 }
@@ -38,12 +45,19 @@ const SERVICE_IMAGE: Record<string, string> = {
 };
 
 /* ── Page ──────────────────────────────────────────────────────────────────── */
-export default function ServiceDetailPage({ params }: { params: { slug: string } }) {
-  const service = getServiceBySlug(params.slug);
+export default async function ServiceDetailPage({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}) {
+  const { slug } = await params;
+
+  const service = getServiceBySlug(slug);
+
   if (!service) notFound();
 
-  const related  = getRelatedServices(params.slug);
-  const imgSrc   = SERVICE_IMAGE[params.slug] ?? '';
+  const related = getRelatedServices(slug);
+  const imgSrc = SERVICE_IMAGE[slug] ?? '';
 
   return (
     <div className="min-h-screen bg-black text-[#e6eaed]">
