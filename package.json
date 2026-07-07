@@ -1,7 +1,7 @@
 {
-  "name": "one-touch-solutions",
+  "name": "Humanic-HR-solutions",
   "version": "2.0.0",
-  "description": "Next-Level Industrial Luxury Website - Golden Pyramids KSA",
+  "description": "Industrial Website - Humanic HR Solutions ",
   "private": true,
   "scripts": {
     "dev": "next dev",
