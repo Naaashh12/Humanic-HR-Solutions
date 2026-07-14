@@ -209,43 +209,47 @@ style={{
 >
 <div className="p-4 space-y-2">
 {NAV_LINKS.map((link) => (
-<div key={link.href}>
-<button
-onClick={() => {
-if (link.label === "Services") {
-                      toggleServices();
-                    } else {
-                      setIsOpen(false);
-                    }
-                  }}
-className="w-full text-left p-3 text-[#0f172a] hover:text-[#2b5a8f] hover:bg-slate-50 transition-colors uppercase text-sm font-semibold tracking-widest flex items-center justify-between"
->
-{link.label}
-{link.label === "Services" && (
-<ChevronDown
-className={`w-4 h-4 transition-transform ${servicesOpen ? "rotate-180" : ""}`}
-/>
-                  )}
-</button>
+  <div key={link.href}>
+    {link.label === "Services" ? (
+      <>
+        <button
+          onClick={toggleServices}
+          className="w-full text-left p-3 text-[#0f172a] hover:text-[#2b5a8f] hover:bg-slate-50 transition-colors uppercase text-sm font-semibold tracking-widest flex items-center justify-between"
+        >
+          {link.label}
+          <ChevronDown
+            className={`w-4 h-4 transition-transform ${
+              servicesOpen ? "rotate-180" : ""
+            }`}
+          />
+        </button>
 
-
-{/* Mobile Services Submenu */}
-{link.label === "Services" && servicesOpen && (
-<div className="pl-4 space-y-1 bg-slate-50/50">
-{SERVICES.map((service) => (
-<Link
-key={service.slug}
-href={`/services/${service.slug}`}
-onClick={() => setIsOpen(false)}
-className="block p-2 text-xs text-slate-600 hover:text-[#2b5a8f] hover:bg-slate-100 transition-colors"
->
-{service.title}
-</Link>
-                    ))}
-</div>
-                )}
-</div>
+        {servicesOpen && (
+          <div className="pl-4 space-y-1 bg-slate-50/50">
+            {SERVICES.map((service) => (
+              <Link
+                key={service.slug}
+                href={`/services/${service.slug}`}
+                onClick={() => setIsOpen(false)}
+                className="block p-2 text-xs text-slate-600 hover:text-[#2b5a8f] hover:bg-slate-100 transition-colors"
+              >
+                {service.title}
+              </Link>
             ))}
+          </div>
+        )}
+      </>
+    ) : (
+      <Link
+        href={link.href}
+        onClick={() => setIsOpen(false)}
+        className="block w-full p-3 text-[#0f172a] hover:text-[#2b5a8f] hover:bg-slate-50 transition-colors uppercase text-sm font-semibold tracking-widest"
+      >
+        {link.label}
+      </Link>
+    )}
+  </div>
+))}
 
 
 {/* Mobile CTA */}

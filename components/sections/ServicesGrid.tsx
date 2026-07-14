@@ -1,5 +1,6 @@
 'use client';
 
+import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { SERVICES } from '@/lib/services-data';
 import { ServiceCard } from '@/components/ui/ServiceCard';
@@ -96,13 +97,13 @@ export function ServicesGrid() {
           <p className="text-slate-600 mb-6 max-w-2xl mx-auto">
             Contact our team to discuss your specific requirements and how we can support your workforce
           </p>
-          <a
+          <Link
             href="/contact"
             className="inline-flex items-center gap-2 px-6 py-3 border border-[#2b5a8f] text-[#2b5a8f] font-bold uppercase tracking-widest hover:bg-[rgba(43,90,143,0.08)] transition-all duration-300 hover:shadow-[0_0_20px_rgba(43,90,143,0.15)]"
           >
             Request Support
             <span>→</span>
-          </a>
+          </Link>
         </motion.div>
       </div>
     </section>

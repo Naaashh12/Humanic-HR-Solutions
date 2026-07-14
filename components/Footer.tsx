@@ -1,5 +1,6 @@
 'use client';
 
+import Link from 'next/link';
 import { motion } from 'framer-motion';
 
 export const Footer = () => {
@@ -18,10 +19,10 @@ export const Footer = () => {
           >
             <h3 className="text-lg font-bold text-gold mb-4">Company</h3>
             <ul className="space-y-2">
-              <li><a href="/#about" className="text-gray-400 hover:text-gold transition-colors">About Us</a></li>
-              <li><a href="/#services" className="text-gray-400 hover:text-gold transition-colors">Services</a></li>
-              <li><a href="/careers" className="text-gray-400 hover:text-gold transition-colors">Careers</a></li>
-              <li><a href="/contact" className="text-gray-400 hover:text-gold transition-colors">Contact</a></li>
+              <li><Link href="/#about" className="text-gray-400 hover:text-gold transition-colors">About Us</Link></li>
+              <li><Link href="/#services" className="text-gray-400 hover:text-gold transition-colors">Services</Link></li>
+              <li><Link href="/careers" className="text-gray-400 hover:text-gold transition-colors">Careers</Link></li>
+              <li><Link href="/contact" className="text-gray-400 hover:text-gold transition-colors">Contact</Link></li>
             </ul>
           </motion.div>
 
@@ -34,10 +35,10 @@ export const Footer = () => {
           >
             <h3 className="text-lg font-bold text-gold mb-4">Services</h3>
             <ul className="space-y-2">
-              <li><a href="/#services" className="text-gray-400 hover:text-gold transition-colors">HR Strategy</a></li>
-              <li><a href="/#services" className="text-gray-400 hover:text-gold transition-colors">Talent Acquisition</a></li>
-              <li><a href="/#services" className="text-gray-400 hover:text-gold transition-colors">Payroll & Benefits</a></li>
-              <li><a href="/#services" className="text-gray-400 hover:text-gold transition-colors">HR Operations</a></li>
+              <li><Link href="/#services" className="text-gray-400 hover:text-gold transition-colors">HR Strategy</Link></li>
+              <li><Link href="/#services" className="text-gray-400 hover:text-gold transition-colors">Talent Acquisition</Link></li>
+              <li><Link href="/#services" className="text-gray-400 hover:text-gold transition-colors">Payroll & Benefits</Link></li>
+              <li><Link href="/#services" className="text-gray-400 hover:text-gold transition-colors">HR Operations</Link></li>
             </ul>
           </motion.div>
 

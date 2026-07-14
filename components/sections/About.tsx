@@ -1,5 +1,6 @@
 'use client';
 
+import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { useInViewAnimation } from '@/hooks/useScrollAnimation';
 import { AnimatedCounter } from '@/components/ui/AnimatedCounter';
@@ -109,13 +110,13 @@ export function AboutSection() {
             </div>
 
             {/* CTA Link */}
-            <a
+            <Link
               href="/services"
               className="inline-flex items-center gap-2 text-[#2b5a8f] font-bold uppercase tracking-widest hover:text-[#1b365d] transition-colors group"
             >
               <span>Explore Our Services</span>
               <span className="group-hover:translate-x-2 transition-transform">→</span>
-            </a>
+            </Link>
           </motion.div>
         </div>
 

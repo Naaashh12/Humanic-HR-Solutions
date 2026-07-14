@@ -1,4 +1,4 @@
-import { motion } from 'framer-motion';
+import Link from 'next/link';
 import { SERVICES } from '@/lib/services-data';
 import { ServiceCard } from '@/components/ui/ServiceCard';
 
@@ -44,12 +44,12 @@ export default function ServicesPage() {
           <p className="text-[#1b365d]/70 mb-6">
             Contact our team for custom HR solutions tailored to your specific requirements
           </p>
-          <a
+          <Link
             href="/contact"
             className="inline-block px-8 py-4 bg-[#cca300] text-white font-bold uppercase tracking-widest hover:shadow-[0_0_40px_rgba(204, 163, 0,0.8)] transition-all duration-300"
           >
             Get in Touch
-          </a>
+          </Link>
         </div>
       </div>
     </div>

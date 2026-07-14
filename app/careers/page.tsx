@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, type ChangeEvent, type FormEvent } from 'react';
+import Link from 'next/link';
 import { motion } from 'framer-motion';
 import {
   Users,
@@ -335,12 +336,12 @@ export default function CareersPage() {
                 </span>
               </div>
 
-              <a
+              <Link
                 href="/contact"
                 className="inline-block text-[#cca300] font-bold text-sm uppercase tracking-widest hover:text-[#ffd700] transition-colors"
               >
                 Apply Now →
-              </a>
+              </Link>
             </motion.div>
           ))}
         </div>

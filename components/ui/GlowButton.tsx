@@ -2,7 +2,7 @@
 
 import { ReactNode } from 'react';
 import { COLORS } from '@/lib/constants';
-
+import Link from "next/link";
 interface GlowButtonProps {
   children: ReactNode;
   onClick?: () => void;
@@ -54,15 +54,25 @@ secondary:
   );
 
   if (href) {
+    const isExternal = /^(https?:|mailto:|tel:)/.test(href);
+
+    if (isExternal) {
+      return (
+        <a
+          href={href}
+          target={target}
+          rel={rel}
+          className={buttonClasses}
+        >
+          {content}
+        </a>
+      );
+    }
+
     return (
-      <a
-        href={href}
-        target={target}
-        rel={rel}
-        className={buttonClasses}
-      >
+      <Link href={href} className={buttonClasses}>
         {content}
-      </a>
+      </Link>
     );
   }
 
