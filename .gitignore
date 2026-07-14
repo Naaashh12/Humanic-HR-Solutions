@@ -11,6 +11,7 @@ node_modules/
 .env
 .env.local
 
+out/
 # General
 .DS_Store
 *.log
