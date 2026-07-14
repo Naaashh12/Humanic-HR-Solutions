@@ -30,8 +30,8 @@ export function GlowButton({
 
   const variantStyles = {
     primary: `bg-[${COLORS.redLight}] text-white border-2 border-[${COLORS.redDark}] hover:shadow-[0_0_40px_rgba(204, 163, 0,0.8),0_0_60px_rgba(153, 122, 0,0.4)] shadow-[0_0_20px_rgba(204, 163, 0,0.5),inset_0_0_20px_rgba(255, 215, 0,0.1)]`,
-    secondary: `bg-transparent text-[${COLORS.grayLight}] border border-[${COLORS.redDark}] hover:bg-[rgba(153, 122, 0,0.15)] hover:border-[${COLORS.redLight}] hover:shadow-[0_0_20px_rgba(204, 163, 0,0.4)] hover:text-white`,
-  };
+secondary:
+"bg-[#CCA300] border border-white text-white hover:bg-[#FFD700] hover:shadow-[0_0_30px_rgba(255,215,0,0.6)] active:scale-95 transition-all duration-300"  };
 
   const sizeStyles = {
     sm: 'px-4 py-2 text-sm',

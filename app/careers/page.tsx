@@ -354,7 +354,7 @@ export default function CareersPage() {
           viewport={{ once: true }}
           className="overflow-hidden border border-[#2b5a8f]/30 bg-[linear-gradient(135deg,rgba(43,90,143,0.12),rgba(255,255,255,0.97))] p-6 shadow-[0_18px_60px_rgba(15,23,42,0.08)] md:p-8"
         >
-          <div className="grid gap-8 xl:grid-cols-[0.95fr_1.05fr] xl:items-start">
+          <div className="grid gap-8 xl:grid-cols-[0.95fr_1.05fr] xl:items-start" >
             <div className="flex h-full flex-col gap-4">
               <div className="inline-flex h-12 w-12 items-center justify-center border border-[#2b5a8f]/30 bg-white text-[#2b5a8f] shadow-sm">
                 <Users className="h-6 w-6" />

@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 import { useRef } from 'react';
 import { GlowButton } from '@/components/ui/GlowButton';
 import { useInViewAnimation } from '@/hooks/useScrollAnimation';
-import Threads from '@/components/Threads';
+// import Threads from '@/components/Threads';
 
 
 export function HeroSection() {
@@ -36,7 +36,7 @@ export function HeroSection() {
       ref={ref}
       className="relative w-full min-h-screen bg-[#f8fafc] flex items-center justify-center overflow-hidden pt-14"
     >
-      {/* THREADS BACKGROUND */}
+      {/* THREADS BACKGROUND
 <div className="absolute inset-0 z-0 overflow-hidden">
   <div className="w-full h-full relative">
     <Threads
@@ -46,18 +46,38 @@ export function HeroSection() {
       enableMouseInteraction={false}
     />
   </div>
+</div> */}
+{/* VIDEO BACKGROUND */}
+<div className="absolute inset-0 z-0 overflow-hidden">
+  <video
+    autoPlay muted loop playsInline
+    className="w-full h-full object-cover scale-105 animate-hero-zoom"
+  >
+    <source src="/hero.mp4" type="video/mp4" />
+  </video>
 </div>
 
-      {/* VIGNETTE OVERLAY */}
-      <div
-        className="absolute inset-0 z-10 pointer-events-none"
-        style={{
-          background: 'radial-gradient(ellipse at center, transparent 0%, rgba(248, 250, 252, 0.7) 100%)',
-        }}
-      />
+
+      {/* COLOR GRADE — ties video to brand palette */}
+<div
+  className="absolute inset-0 z-10 pointer-events-none"
+  style={{
+    background:
+      'linear-gradient(135deg, rgba(27,54,93,0.15) 0%, rgba(15,23,42,0.05) 50%, rgba(204,163,0,0.05) 100%)',
+  }}
+/>
+
+{/* DIRECTIONAL SCRIM — protects text legibility, heavier at bottom for stats/buttons */}
+<div
+  className="absolute inset-0 z-10 pointer-events-none"
+  style={{
+    background:
+      'linear-gradient(180deg, rgba(8,14,26,0.20) 0%, rgba(8,14,26,0.08) 35%, rgba(8,14,26,0.12) 70%, rgba(8,14,26,0.35) 100%)',
+  }}
+/>
 
       {/* SCANLINE OVERLAY */}
-      <div className="absolute inset-0 z-10 pointer-events-none opacity-[0.03]">
+      {/* <div className="absolute inset-0 z-10 pointer-events-none opacity-[0.03]">
         <div
           style={{
             backgroundImage:
@@ -65,7 +85,7 @@ export function HeroSection() {
           }}
           className="w-full h-full"
         />
-      </div>
+      </div> */}
 
       {/* CONTENT */}
       <motion.div
@@ -82,7 +102,7 @@ export function HeroSection() {
 
         {/* Preheading */}
         <motion.p
-          className="text-sm md:text-base font-bold text-[#cca300] uppercase tracking-widest mb-4 font-bebas"
+          className="text-sm md:text-base font-bold text-white uppercase tracking-[0.3em] mb-4 font-bebas drop-shadow-[0_2px_8px_rgba(0,0,0,0.35)]"
           variants={itemVariants}
         >
           Welcome to Smarter HR
@@ -90,24 +110,30 @@ export function HeroSection() {
 
         {/* Main Heading */}
         <motion.h1
-          className="text-5xl md:text-7xl lg:text-8xl font-bold font-bebas text-[#0f172a] mb-6 leading-tight"
-          variants={itemVariants}
-        >
-          Human{' '}
-          <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#1b365d] via-[#2b5a8f] to-[#3b82f6]">
-            Excellence
-          </span>
-          <br /> Through Smarter HR
-        </motion.h1>
+  className="text-5xl md:text-7xl lg:text-8xl font-bold font-bebas text-white mb-6 leading-tight drop-shadow-[0_2px_20px_rgba(0,0,0,0.3)]"
+  variants={itemVariants}
+>
+  Human{' '}
+  <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#ffd700] via-[#cca300] to-[#f5d36a]">
+    Excellence
+  </span>
+  <br /> Through Smarter HR
+</motion.h1>
 
         {/* Subheading */}
         <motion.p
-          className="text-lg md:text-xl text-slate-600 mb-8 max-w-2xl mx-auto leading-relaxed font-dm-sans"
-          variants={itemVariants}
-        >
-          Delivering comprehensive HR solutions across recruitment, payroll, compliance,
-          employee relations, and workforce support across Saudi Arabia.
-        </motion.p>
+  className="text-lg md:text-xl text-[#d7e7ff] mb-8 max-w-2xl mx-auto leading-relaxed font-dm-sans drop-shadow-[0_2px_8px_rgba(0,0,0,0.35)]"
+  variants={itemVariants}
+>
+  Delivering comprehensive{" "}
+  <span className="font-bold text-[#FFD700]">
+    HR solutions
+  </span>{" "}
+  across recruitment, compliance, employee relations, and workforce support across{" "}
+  <span className="font-bold text-[#FFD700]">
+    Saudi Arabia.
+  </span>
+</motion.p>
 
         {/* CTA Buttons */}
         <motion.div

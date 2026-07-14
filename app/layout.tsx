@@ -1,4 +1,3 @@
-
 import { Bebas_Neue, DM_Sans } from 'next/font/google';
 import './globals.css';
 import { Navbar } from '@/components/layout/Navbar';
