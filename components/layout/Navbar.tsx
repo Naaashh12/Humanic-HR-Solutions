@@ -73,24 +73,24 @@ height={60}
 className="object-contain"
 />
 <span className="font-bebas font-bold uppercase tracking-wider whitespace-nowrap flex items-end">
-<span className="text-[#cca300] text-2xl sm:text-3xl lg:text-3xl">
+<span className="text-[#D49500] text-2xl sm:text-3xl lg:text-3xl">
     Humanic{"  "}
 </span>
 
 
 <span className="relative top-0">
 <span className="relative top-2 flex items-end">
-<span className="text-[#cca300] text-[2.6rem] sm:text-[3.4rem] lg:text-[3rem] leading-none font-extrabold">
+<span className="text-[#D49500] text-[2.6rem] sm:text-[3.4rem] lg:text-[3rem] leading-none font-extrabold">
     H
 </span>
-<span className="-ml-2.5 text-[#2b5a8f]  text-[2.6rem] sm:text-[3.4rem] lg:text-[3rem] leading-none font-extrabold">
+<span className="-ml-2.5 text-[#002D5A]  text-[2.6rem] sm:text-[3.4rem] lg:text-[3rem] leading-none font-extrabold">
     R
 </span>
 </span>
 </span>
 
 
-<span className="text-[#2b5a8f]  text-2xl sm:text-3xl lg:text-3xl group-hover:text-[#ffd700] transition-colors">
+<span className="text-[#002D5A]  text-2xl sm:text-3xl lg:text-3xl group-hover:text-[#ffd700] transition-colors">
   Solutions
 </span>
 </span>
@@ -175,12 +175,12 @@ className="p-4 border border-slate-100 hover:border-[#2b5a8f] bg-slate-50 hover:
 {/* CTA Button and Mobile Menu */}
 <div className="flex items-center gap-4">
 <GlowButton
-href="/contact"
-variant="primary"
-size="sm"
-className="hidden sm:inline-flex"
+  href="/contact"
+  variant="primary"
+  size="sm"
+  className="hidden sm:inline-flex bg-[#002D5A] hover:bg-[#004080] border-[#002D5A]"
 >
-            Get Quote
+  Get Quote
 </GlowButton>
 
 
@@ -190,9 +190,9 @@ onClick={toggleMenu}
 className="md:hidden p-2 hover:bg-slate-100 rounded transition-colors"
 >
 {isOpen ? (
-<X className="w-6 h-6 text-[#2b5a8f]" />
+<X className="w-6 h-6 text-[#002D5A]" />
             ) : (
-<Menu className="w-6 h-6 text-[#2b5a8f]" />
+<Menu className="w-6 h-6 text-[#002D5A]" />
             )}
 </button>
 </div>
@@ -257,7 +257,7 @@ style={{
 href="/contact"
 variant="primary"
 size="sm"
-className="w-full mt-4"
+  className="hidden sm:inline-flex bg-[#002D5A] hover:bg-[#004080] border-[#002D5A]"
 >
               Get Quote
 </GlowButton>
@@ -267,3 +267,4 @@ className="w-full mt-4"
 </nav>
   );
 }
+

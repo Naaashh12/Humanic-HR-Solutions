@@ -8,6 +8,7 @@ import {
   COMPANY_LOCATION,
   COMPANY_PHONE,
   COMPANY_EMAIL,
+  COMPANY_EMAIL_ALT,
   FOOTER_SECTIONS,
   SOCIAL_LINKS,
 } from '@/lib/constants';
@@ -336,6 +337,15 @@ export function Footer() {
                 <Mail className="w-4 h-4 text-[#ffd700] shrink-0" />
                 <a href={`mailto:${COMPANY_EMAIL}`} className="break-all">{COMPANY_EMAIL}</a>
               </div>
+              <div className="flex items-center gap-3 text-slate-300 hover:text-[#ffd700] transition-colors">
+  <Mail className="w-4 h-4 text-[#ffd700] shrink-0" />
+  <a
+    href={`mailto:${COMPANY_EMAIL_ALT}`}
+    className="break-all"
+  >
+    {COMPANY_EMAIL_ALT}
+  </a>
+</div>
             </div>
           </div>
 
@@ -347,10 +357,10 @@ export function Footer() {
             <ul className="space-y-2">
               {FOOTER_SECTIONS.company.links.map((link, i) => (
                 <li key={i}>
-                  <Link href={link.href} className="text-slate-300 hover:text-[#ffd700] transition-colors text-sm flex items-center gap-2 group">
+                  <a href={link.href} className="text-slate-300 hover:text-[#ffd700] transition-colors text-sm flex items-center gap-2 group">
                     <span className="text-[#2b5a8f] opacity-0 group-hover:opacity-100 transition-all shrink-0">▸</span>
                     {link.label}
-                  </Link>
+                  </a>
                 </li>
               ))}
             </ul>
@@ -407,17 +417,10 @@ export function Footer() {
               <ul className="space-y-2">
                 {FOOTER_SECTIONS.contact.links.map((link, i) => (
                   <li key={i}>
-                    {link.href.startsWith('mailto:') || link.href.startsWith('tel:') ? (
-                      <a href={link.href} className="text-slate-300 hover:text-[#ffd700] transition-colors text-sm flex items-center gap-2 group">
-                        <span className="text-[#2b5a8f] opacity-0 group-hover:opacity-100 transition-all shrink-0">▸</span>
-                        {link.label}
-                      </a>
-                    ) : (
-                      <Link href={link.href} className="text-slate-300 hover:text-[#ffd700] transition-colors text-sm flex items-center gap-2 group">
-                        <span className="text-[#2b5a8f] opacity-0 group-hover:opacity-100 transition-all shrink-0">▸</span>
-                        {link.label}
-                      </Link>
-                    )}
+                    <a href={link.href} className="text-slate-300 hover:text-[#ffd700] transition-colors text-sm flex items-center gap-2 group">
+                      <span className="text-[#2b5a8f] opacity-0 group-hover:opacity-100 transition-all shrink-0">▸</span>
+                      {link.label}
+                    </a>
                   </li>
                 ))}
               </ul>
@@ -431,10 +434,10 @@ export function Footer() {
               <ul className="space-y-2">
                 {FOOTER_SECTIONS.legal.links.map((link, i) => (
                   <li key={i}>
-                    <Link href={link.href} className="text-slate-300 hover:text-[#ffd700] transition-colors text-sm flex items-center gap-2 group">
+                    <a href={link.href} className="text-slate-300 hover:text-[#ffd700] transition-colors text-sm flex items-center gap-2 group">
                       <span className="text-[#2b5a8f] opacity-0 group-hover:opacity-100 transition-all shrink-0">▸</span>
                       {link.label}
-                    </Link>
+                    </a>
                   </li>
                 ))}
               </ul>

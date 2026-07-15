@@ -10,7 +10,9 @@ import type { Metadata, Viewport } from 'next';
 
 export const viewport: Viewport = {
   width: 'device-width',
-  initialScale: 1.0,
+  initialScale: 1,
+  themeColor: '#ffffff',
+  colorScheme: 'light',
 };
 
 
@@ -53,13 +55,17 @@ export default function RootLayout({
 }) {
   return (
     <html
-      lang="en"
-      className={cn(bebasNeue.variable, dmSans.variable, "font-sans")}
-      style={{
-        fontFamily: 'var(--font-dm-sans)',
-      }}
-    >
-      <body className="bg-black text-[#e6eaed] overflow-x-hidden">
+  lang="en"
+  className={cn(bebasNeue.variable, dmSans.variable, "font-sans")}
+  style={{
+    fontFamily: "var(--font-dm-sans)",
+    colorScheme: "light",
+  }}
+>
+      <body
+  className="bg-[#f8fafc] text-[#1e293b] overflow-x-hidden"
+  style={{ colorScheme: "light" }}
+>
         {/* Custom cursor */}
         <CustomCursor />
 

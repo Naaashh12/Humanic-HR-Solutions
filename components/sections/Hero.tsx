@@ -131,7 +131,7 @@ export function HeroSection() {
   </span>{" "}
   across recruitment, compliance, employee relations, and workforce support across{" "}
   <span className="font-bold text-[#FFD700]">
-    Saudi Arabia.
+    India and the Gulf.
   </span>
 </motion.p>
 

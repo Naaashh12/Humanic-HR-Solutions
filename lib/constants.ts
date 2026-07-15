@@ -5,7 +5,8 @@ export const COMPANY_LOCATION = 'Mangalore, Karnataka, India';
 export const COMPANY_POSTAL = '575001';
 export const COMPANY_PHONE = '+91 9980720316';
 export const COMPANY_PHONE_ALT = '+91 8050920316';
-export const COMPANY_EMAIL = 'info@humanichr.com';
+export const COMPANY_EMAIL = 'info@humanichrs.com';
+export const COMPANY_EMAIL_ALT = 'hr@humanichrs.com'; // replace with your second email
 export const COMPANY_WEBSITE = 'humanichr.com';
 
 // Brand Colors
